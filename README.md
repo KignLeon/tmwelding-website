@@ -1,62 +1,48 @@
-# Website Base Template
+# T & M Welding Website
 
-A clean, blank, reusable website template ready for customization.
+Custom welding and metal fabrication services in San Diego.
 
-## Features
+## Live Site
 
-- **Modern Design System**: Tailwind CSS + custom design tokens
-- **Responsive**: Mobile-first layout with desktop enhancements
-- **4 Core Pages**: Home, About, Services, Contact
-- **Form Components**: Hero forms, modals, contact forms
-- **Animations**: Smooth transitions, scroll reveals, micro-interactions
-- **Clean Codebase**: Semantic HTML5, organized CSS, modular JS
+🌐 **[tmwelding.kignleon.com](https://kignleon.github.io/tmwelding-website/)**
 
-## File Structure
+## About
 
-```
-/
-├── index.html              # Homepage
-├── about/index.html        # About page
-├── services/index.html     # Services page
-├── contact/index.html      # Contact page
-├── css/style.css           # Custom styles
-├── js/script.js            # Interactive functionality
-└── assets/placeholders/    # Placeholder images
-    ├── logo-placeholder.svg
-    ├── hero-placeholder.svg
-    ├── team-placeholder.svg
-    └── service-placeholder.svg
-```
+T & M Welding is a certified welding business with 18+ years of experience serving San Diego and surrounding areas.
 
-## Customization
+### Services
+- Metal Fabrication
+- Exhaust Welding & Mufflers
+- Trailers & Hitches
+- Hand Rails & Iron Work
+- Security Gates & Fences
+- Custom Brackets & Plates
+- BBQ Grills & Smokers
+- Reinforcements & Structural Repairs
 
-### Quick Start
+### Contact
+- **Phone**: (619) 405-7892
+- **Location**: San Diego, CA 92114
+- **License**: #1148505
 
-1. Replace "Company Name" with your brand name in all HTML files
-2. Update contact information (phone, email, address)
-3. Replace placeholder images in `/assets/placeholders/`
-4. Customize colors in Tailwind config (look for `colors: { electric: ... }`)
-5. Update meta descriptions and titles for SEO
+## Design
 
-### Form Integration
-
-Forms use `action="#"` by default. To enable submissions:
-
-1. Replace `action="#"` with your form endpoint
-2. Options: FormSubmit.co, Formspree, Netlify Forms, custom backend
-
-### Deployment
-
-GitHub Pages compatible. Simply push to your repo and enable Pages.
+Built with a **neo-brutalism / anti-design** aesthetic:
+- **Colors**: Safety Orange (#FF5500), Matte Black (#000), White (#FFF)
+- **Font**: Bebas Neue (headings), Inter (body)
+- **Style**: Solid shadows, hard borders, high contrast
 
 ## Tech Stack
 
 - HTML5
-- Tailwind CSS (CDN)
+- CSS3 (Custom + Tailwind CDN)
 - Vanilla JavaScript
-- Font Awesome Icons
-- Google Fonts (Inter)
+- GitHub Pages (Static Hosting)
 
-## License
+## Deployment
 
-MIT - Use freely for any project.
+This site is automatically deployed to GitHub Pages via GitHub Actions when pushing to the `main` branch.
+
+---
+
+© 2026 T & M Welding. All rights reserved.
