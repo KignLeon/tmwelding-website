@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welding Projects Gallery | T & M Welding San Diego</title>
+    <meta name="description"
+        content="View our welding and metal fabrication projects. Custom BBQ grills, exhaust repairs, iron fences, trailers, and more. See the quality of our work.">
+    <meta name="keywords"
+        content="Welding Projects, Metal Fabrication Portfolio, Custom Welding Work, San Diego Welder">
+    <link rel="canonical" href="https://tmwelding.com/projects/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Projects | T & M Welding">
+    <meta property="og:description"
+        content="See our welding and metal fabrication work. Quality craftsmanship in San Diego.">
+    <meta property="og:url" content="https://tmwelding.com/projects/">
+    <meta property="og:type" content="website">
+
+    <!-- Design System -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        action: '#FF5500',
+                        ink: '#000000',
+                        canvas: '#FFFFFF',
+                        structure: '#F5F5F5',
+                        trust: '#2B9348',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Bebas Neue', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Roboto Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'solid': '4px 4px 0px 0px #000000',
+                        'solid-lg': '8px 8px 0px 0px #000000',
+                        'solid-orange': '4px 4px 0px 0px #FF5500',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-canvas text-ink">
+
+    <!-- Top Utility Strip -->
+    <div class="bg-ink text-canvas py-2 text-center">
+        <div
+            class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-mono">
+            <span class="flex items-center gap-2">
+                <i class="fas fa-star text-action"></i>
+                <span class="font-bold">5.0 on Yelp</span>
+            </span>
+            <span class="hidden sm:flex items-center gap-2">
+                <i class="fas fa-clock text-action"></i>
+                <span>Open 6:00 AM – 7:00 PM</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-action"></i>
+                <span>San Diego, CA</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-canvas border-b-3 border-ink sticky top-0 z-50" style="border-bottom: 3px solid #000;">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand -->
+                <a href="../" class="flex items-center gap-3 group">
+                    <div class="bg-action text-canvas p-2 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col leading-none">
+                        <span
+                            class="text-3xl md:text-4xl font-heading text-ink group-hover:text-action transition-colors tracking-wide">T
+                            & M WELDING</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../"
+                        class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">HOME</a>
+                    <a href="../services/"
+                        class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">SERVICES</a>
+                    <a href="./" class="font-heading text-xl text-action border-b-3 border-action tracking-wide"
+                        style="border-bottom: 3px solid #FF5500;">PROJECTS</a>
+                    <a href="../about/"
+                        class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">ABOUT</a>
+                    <a href="../contact/"
+                        class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">CONTACT</a>
+
+                    <div class="flex items-center gap-3 ml-4">
+                        <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3">
+                            <i class="fas fa-phone-alt"></i> CALL NOW
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Trigger -->
+                <button id="mobile-menu-btn"
+                    class="lg:hidden text-ink p-2 border-3 border-ink hover:bg-action hover:text-canvas transition-colors"
+                    style="border: 3px solid #000;">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-wrapper lg:hidden flex flex-col pt-10 px-6 space-y-6">
+        <a href="../"
+            class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">HOME</a>
+        <a href="../services/"
+            class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">SERVICES</a>
+        <a href="./" class="text-2xl font-heading text-action tracking-wide">PROJECTS</a>
+        <a href="../about/"
+            class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">ABOUT</a>
+        <a href="../contact/"
+            class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">CONTACT</a>
+        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4">
+            <i class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative bg-ink pt-32 pb-16 overflow-hidden text-center border-b-4 border-action">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80"
+                class="w-full h-full object-cover grayscale" alt="Projects background">
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4">
+            <div class="inline-block bg-action px-4 py-2 text-canvas font-mono font-bold uppercase text-sm mb-4 border-3 border-canvas"
+                style="border: 3px solid #fff;">
+                <i class="fas fa-images mr-2"></i> Our Work
+            </div>
+            <h1 class="text-5xl md:text-7xl font-heading text-canvas mb-6">RECENT WELDING<br>PROJECTS</h1>
+            <p class="text-xl text-canvas/80 max-w-2xl mx-auto">
+                Real projects for real customers. See the quality and craftsmanship that goes into every job.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-16 bg-canvas">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Custom BBQ Smoker">
+                        <div
+                            class="absolute top-4 left-4 bg-action text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-ink">
+                            BBQ & Smokers
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">CUSTOM BBQ SMOKER</h3>
+                        <p class="text-ink/70 text-sm">Heavy-gauge steel construction. Custom-designed to customer
+                            specifications with temperature controls and removable grates.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Exhaust Repair">
+                        <div
+                            class="absolute top-4 left-4 bg-ink text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-canvas">
+                            Exhaust
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">EXHAUST SYSTEM REPAIR</h3>
+                        <p class="text-ink/70 text-sm">Patched corroded sections and reinforced weak points. Clean MIG
+                            welds for a leak-free exhaust system.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1558618047-f4b511d0f5c3?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Iron Fence Fabrication">
+                        <div
+                            class="absolute top-4 left-4 bg-action text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-ink">
+                            Iron Work
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">IRON FENCE FABRICATION</h3>
+                        <p class="text-ink/70 text-sm">Custom iron fence panels with decorative elements. Powder-coated
+                            for weather resistance.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Hydraulic Bracket Repair">
+                        <div
+                            class="absolute top-4 left-4 bg-ink text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-canvas">
+                            Brackets
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">HYDRAULIC BRACKET REPAIR</h3>
+                        <p class="text-ink/70 text-sm">Repaired cracked hydraulic mounting bracket. Reinforced stress
+                            points for extended service life.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Trailer Frame Repair">
+                        <div
+                            class="absolute top-4 left-4 bg-action text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-ink">
+                            Trailers
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">TRAILER FRAME REPAIR</h3>
+                        <p class="text-ink/70 text-sm">Replaced rusted section of trailer frame. Added reinforcement
+                            plates for heavy-duty hauling.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Custom Hand Rails">
+                        <div
+                            class="absolute top-4 left-4 bg-ink text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-canvas">
+                            Railings
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">CUSTOM STAIR RAILING</h3>
+                        <p class="text-ink/70 text-sm">Custom-designed stair railing with clean welds and smooth finish.
+                            Built to customer specifications.</p>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Security Gate">
+                        <div
+                            class="absolute top-4 left-4 bg-action text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-ink">
+                            Security
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">DRIVEWAY SECURITY GATE</h3>
+                        <p class="text-ink/70 text-sm">Heavy-duty driveway gate with reinforced hinges. Built tough for
+                            security and curb appeal.</p>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Custom Fire Pit">
+                        <div
+                            class="absolute top-4 left-4 bg-ink text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-canvas">
+                            Outdoor
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">CUSTOM FIRE PIT</h3>
+                        <p class="text-ink/70 text-sm">Steel fire pit with spark screen and decorative cut-outs. Heavy
+                            construction for years of use.</p>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="group">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            alt="Equipment Repair">
+                        <div
+                            class="absolute top-4 left-4 bg-action text-canvas px-3 py-1 font-mono text-xs font-bold uppercase border-2 border-ink">
+                            Repairs
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-heading text-ink mb-2">EQUIPMENT FRAME REPAIR</h3>
+                        <p class="text-ink/70 text-sm">Repaired cracked equipment frame. Reinforced structural points
+                            for continued heavy use.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-structure border-t-4 border-b-4 border-ink">
+        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-heading text-ink mb-6">
+                NEED SIMILAR WORK?<br><span class="text-action">LET'S BUILD IT.</span>
+            </h2>
+            <p class="text-xl text-ink/80 mb-10 max-w-2xl mx-auto">
+                Whether you have a specific design in mind or need help figuring out the best solution, I'm here to
+                help.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5">
+                    <i class="fas fa-phone-alt"></i> Call (619) 405-7892
+                </a>
+                <a href="../contact/" class="btn-secondary text-2xl px-10 py-5">
+                    Request Similar Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-canvas py-16 border-t-8 border-action">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Brand -->
+            <div>
+                <a href="../" class="flex items-center gap-3 mb-6 group">
+                    <div class="bg-action text-canvas p-2 border-3 border-canvas" style="border: 3px solid #fff;">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <span class="text-3xl font-heading text-canvas group-hover:text-action transition-colors">T & M
+                        WELDING</span>
+                </a>
+                <p class="text-canvas/60 mb-4">
+                    Certified Welder · License #1148505<br>
+                    18+ Years Experience
+                </p>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">SERVICES</h4>
+                <ul class="space-y-3 text-canvas/70">
+                    <li><a href="../services/" class="hover:text-action transition-colors">Metal Fabrication</a></li>
+                    <li><a href="../services/" class="hover:text-action transition-colors">Exhaust Welding</a></li>
+                    <li><a href="../services/" class="hover:text-action transition-colors">Trailers & Hitches</a></li>
+                    <li><a href="../services/" class="hover:text-action transition-colors">BBQ Grills & Smokers</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">COMPANY</h4>
+                <ul class="space-y-3 text-canvas/70">
+                    <li><a href="../services/" class="hover:text-action transition-colors">Services</a></li>
+                    <li><a href="./" class="hover:text-action transition-colors">Projects</a></li>
+                    <li><a href="../about/" class="hover:text-action transition-colors">About</a></li>
+                    <li><a href="../contact/" class="hover:text-action transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">CONTACT</h4>
+                <ul class="space-y-4 text-canvas/70">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-action mt-1"></i>
+                        <span>San Diego, CA 92114</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-action"></i>
+                        <a href="tel:6194057892"
+                            class="hover:text-action transition-colors font-heading text-lg text-canvas">(619)
+                            405-7892</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-canvas/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-canvas/30 text-sm font-mono">© 2026 T & M Welding. All rights reserved.</p>
+            <p class="text-canvas/30 text-sm font-mono">License #1148505</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta md:hidden">
+        <a href="tel:6194057892" class="btn-primary w-full text-center text-xl py-4">
+            <i class="fas fa-phone-alt mr-2"></i> Call (619) 405-7892
+        </a>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

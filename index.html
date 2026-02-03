@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T & M Welding | Custom Welding & Metal Fabrication San Diego</title>
+    <meta name="description"
+        content="Certified welder with 18+ years experience serving San Diego. Custom welding, metal fabrication, exhaust repairs, trailers, and more. Call (619) 405-7892.">
+    <meta name="keywords"
+        content="Welding San Diego, Metal Fabrication, Custom Welding, Exhaust Welding, Trailer Repair, T and M Welding">
+    <link rel="canonical" href="https://tmwelding.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="T & M Welding | Custom Welding & Metal Fabrication">
+    <meta property="og:description"
+        content="Certified welder with 18+ years experience. Custom fabrication, repairs, and metal work in San Diego.">
+    <meta property="og:url" content="https://tmwelding.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="T & M Welding | San Diego">
+    <meta name="twitter:description" content="Custom welding and metal fabrication you can trust.">
+
+    <!-- Design System -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        action: '#FF5500',
+                        ink: '#000000',
+                        canvas: '#FFFFFF',
+                        structure: '#F5F5F5',
+                        trust: '#2B9348',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Bebas Neue', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Roboto Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'solid': '4px 4px 0px 0px #000000',
+                        'solid-lg': '8px 8px 0px 0px #000000',
+                        'solid-orange': '4px 4px 0px 0px #FF5500',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-canvas text-ink">
+
+    <!-- Top Utility Strip -->
+    <div class="bg-ink text-canvas py-2 text-center">
+        <div class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-mono">
+            <span class="flex items-center gap-2">
+                <i class="fas fa-star text-action"></i>
+                <span class="font-bold">5.0 on Yelp</span>
+            </span>
+            <span class="hidden sm:flex items-center gap-2">
+                <i class="fas fa-clock text-action"></i>
+                <span>Open 6:00 AM – 7:00 PM</span>
+            </span>
+            <span class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-action"></i>
+                <span>San Diego, CA</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-canvas border-b-3 border-ink sticky top-0 z-50" style="border-bottom: 3px solid #000;">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand -->
+                <a href="./" class="flex items-center gap-3 group">
+                    <div class="bg-action text-canvas p-2 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col leading-none">
+                        <span class="text-3xl md:text-4xl font-heading text-ink group-hover:text-action transition-colors tracking-wide">T & M WELDING</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="services/" class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">SERVICES</a>
+                    <a href="projects/" class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">PROJECTS</a>
+                    <a href="about/" class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">ABOUT</a>
+                    <a href="contact/" class="font-heading text-xl text-ink hover:text-action transition-colors tracking-wide">CONTACT</a>
+
+                    <div class="flex items-center gap-3 ml-4">
+                        <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3">
+                            <i class="fas fa-phone-alt"></i> CALL NOW
+                        </a>
+                        <a href="contact/" class="btn-outline text-lg px-6 py-3">
+                            GET A QUOTE
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Trigger -->
+                <button id="mobile-menu-btn" class="lg:hidden text-ink p-2 border-3 border-ink hover:bg-action hover:text-canvas transition-colors" style="border: 3px solid #000;">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-wrapper lg:hidden flex flex-col pt-10 px-6 space-y-6">
+        <a href="./" class="text-2xl font-heading text-action tracking-wide">HOME</a>
+        <a href="services/" class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">SERVICES</a>
+        <a href="projects/" class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">PROJECTS</a>
+        <a href="about/" class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">ABOUT</a>
+        <a href="contact/" class="text-2xl font-heading text-canvas tracking-wide hover:text-action transition-colors">CONTACT</a>
+        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4">
+            <i class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative bg-canvas pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden border-b-4 border-ink">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Left Copy -->
+            <div class="z-10 relative order-2 lg:order-1">
+                <div class="inline-block bg-action text-canvas px-4 py-2 font-mono text-sm font-bold uppercase mb-6 border-3 border-ink shadow-solid" style="border: 3px solid #000;">
+                    <i class="fas fa-certificate mr-2"></i> Certified Welder · 18+ Years
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl lg:text-8xl mb-6 leading-none font-heading text-ink">
+                    T & M<br>WELDING
+                </h1>
+                
+                <p class="text-2xl md:text-3xl font-heading text-ink/80 mb-4 tracking-wide">
+                    Custom Welding & Metal Fabrication You Can Trust
+                </p>
+                
+                <p class="text-lg text-ink/70 mb-8 max-w-lg border-l-4 border-action pl-4">
+                    Serving San Diego with honest prices, fast turnaround, and quality craftsmanship. From quick repairs to full custom fabrication.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="tel:6194057892" class="btn-primary text-xl px-8 py-4">
+                        <i class="fas fa-phone-alt"></i> Call (619) 405-7892
+                    </a>
+                    <a href="contact/" class="btn-secondary text-xl px-8 py-4">
+                        Request a Quote
+                    </a>
+                </div>
+
+                <!-- Trust Row -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="trust-badge">
+                        <i class="fab fa-yelp text-red-600"></i>
+                        <span>5.0 Rating</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle text-trust"></i>
+                        <span>Honest Prices</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-bolt text-action"></i>
+                        <span>Fast Turnaround</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="relative z-0 order-1 lg:order-2">
+                <div class="absolute inset-0 bg-ink translate-x-4 translate-y-4 hidden lg:block"></div>
+                <div class="relative border-4 border-ink bg-canvas p-2 shadow-solid-lg">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80"
+                        class="w-full h-[400px] lg:h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        alt="Welding sparks flying during metal fabrication">
+                    
+                    <!-- Experience Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-action text-canvas border-4 border-ink p-4 shadow-solid hidden md:block">
+                        <div class="text-5xl font-heading leading-none">18+</div>
+                        <div class="text-sm font-mono uppercase font-bold">Years Exp.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Quick Quote Bar -->
+    <section class="relative z-30 -mt-8 px-4 mb-20">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="bg-canvas border-4 border-ink shadow-solid-lg p-4 md:p-6">
+                <form action="#" method="POST" class="flex flex-col lg:flex-row gap-4 items-stretch">
+                    <div class="flex-1 flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 relative">
+                            <label class="absolute -top-3 left-4 bg-canvas px-2 text-xs font-bold text-ink uppercase border-2 border-ink">Name</label>
+                            <input type="text" name="name" placeholder="YOUR NAME" required
+                                class="form-input w-full h-14 text-sm">
+                        </div>
+                        <div class="flex-1 relative">
+                            <label class="absolute -top-3 left-4 bg-canvas px-2 text-xs font-bold text-ink uppercase border-2 border-ink">Phone</label>
+                            <input type="tel" name="phone" placeholder="(555) 555-5555" required
+                                class="form-input w-full h-14 text-sm">
+                        </div>
+                        <div class="flex-1 relative">
+                            <label class="absolute -top-3 left-4 bg-canvas px-2 text-xs font-bold text-ink uppercase border-2 border-ink">Email</label>
+                            <input type="email" name="email" placeholder="EMAIL ADDRESS" required
+                                class="form-input w-full h-14 text-sm">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary h-14 px-8 text-xl whitespace-nowrap">
+                        GET QUOTE <i class="fas fa-fire ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-canvas border-b-4 border-ink">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <p class="text-action font-mono font-bold tracking-widest uppercase mb-2 text-sm">Our Expertise</p>
+                    <h2 class="text-5xl md:text-6xl font-heading text-ink leading-none">WELDING &<br>FABRICATION SERVICES</h2>
+                </div>
+                <a href="services/" class="btn-secondary hidden md:inline-flex">
+                    View All Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-action text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-industry text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">METAL FABRICATION</h3>
+                    <p class="text-ink/70">Custom metal work for any project. From brackets to frames, we build it right.</p>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">WELDING REPAIRS</h3>
+                    <p class="text-ink/70">Fix broken metal parts, cracks, and structural damage with precision welding.</p>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-action text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">EXHAUST WELDING</h3>
+                    <p class="text-ink/70">Custom exhaust work, muffler repairs, and performance modifications.</p>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-trailer text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">TRAILERS & HITCHES</h3>
+                    <p class="text-ink/70">Trailer repairs, hitch installation, and custom trailer fabrication.</p>
+                </a>
+
+                <!-- Service 5 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-action text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-grip-lines text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">HAND RAILS & IRON WORK</h3>
+                    <p class="text-ink/70">Custom railings, iron gates, and decorative metalwork for your property.</p>
+                </a>
+
+                <!-- Service 6 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">SECURITY GATES & FENCES</h3>
+                    <p class="text-ink/70">Heavy-duty security gates, fencing, and property protection solutions.</p>
+                </a>
+
+                <!-- Service 7 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-action text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-cubes text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">CUSTOM BRACKETS & PLATES</h3>
+                    <p class="text-ink/70">Precision-cut brackets, mounting plates, and structural components.</p>
+                </a>
+
+                <!-- Service 8 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-fire-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">BBQ GRILLS & SMOKERS</h3>
+                    <p class="text-ink/70">Custom-built BBQ grills, smokers, and outdoor cooking equipment.</p>
+                </a>
+
+                <!-- Service 9 -->
+                <a href="services/" class="service-card p-6 group">
+                    <div class="w-16 h-16 bg-action text-canvas flex items-center justify-center mb-4 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-hard-hat text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2 group-hover:text-action transition-colors">REINFORCEMENTS & REPAIRS</h3>
+                    <p class="text-ink/70">Structural reinforcements, repairs, and load-bearing modifications.</p>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center md:hidden">
+                <a href="services/" class="btn-primary w-full text-xl py-4">
+                    View All Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-structure">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <p class="text-action font-mono font-bold tracking-widest uppercase mb-2 text-sm">The Difference</p>
+                <h2 class="text-5xl md:text-6xl font-heading text-ink">WHY CUSTOMERS CHOOSE<br>T & M WELDING</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="card-brutal p-8 text-center">
+                    <div class="w-20 h-20 bg-action text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-ink" style="border: 3px solid #000;">
+                        <span class="text-4xl font-heading">18+</span>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2">YEARS EXPERIENCE</h3>
+                    <p class="text-ink/70 text-sm">Hands-on welding and fabrication expertise you can rely on.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-brutal p-8 text-center">
+                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-certificate text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2">CERTIFIED & LICENSED</h3>
+                    <p class="text-ink/70 text-sm">License #1148505. Fully compliant and professional.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-brutal p-8 text-center">
+                    <div class="w-20 h-20 bg-action text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-dollar-sign text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2">HONEST PRICING</h3>
+                    <p class="text-ink/70 text-sm">No upsells, no games. Fair prices for quality work.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-brutal p-8 text-center">
+                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-ink" style="border: 3px solid #000;">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading text-ink mb-2">FAST, RELIABLE WORK</h3>
+                    <p class="text-ink/70 text-sm">Quick repairs and custom jobs done right the first time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-20 bg-canvas border-t-4 border-b-4 border-ink">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <p class="text-action font-mono font-bold tracking-widest uppercase mb-2 text-sm">Our Work</p>
+                    <h2 class="text-5xl md:text-6xl font-heading text-ink leading-none">RECENT WELDING<br>PROJECTS</h2>
+                </div>
+                <a href="projects/" class="btn-secondary hidden md:inline-flex">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Project 1 -->
+                <a href="projects/" class="group relative">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" 
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            alt="Custom BBQ Grill">
+                        <div class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-heading text-xl">CUSTOM BBQ GRILL</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="projects/" class="group relative">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80" 
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            alt="Exhaust Welding">
+                        <div class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-heading text-xl">EXHAUST WELDING</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="projects/" class="group relative">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618047-f4b511d0f5c3?auto=format&fit=crop&w=600&q=80" 
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            alt="Iron Fence Fabrication">
+                        <div class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-heading text-xl">IRON FENCE FABRICATION</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="projects/" class="group relative">
+                    <div class="border-4 border-ink shadow-solid overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80" 
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            alt="Hydraulic Bracket Repair">
+                        <div class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-heading text-xl">HYDRAULIC BRACKET REPAIR</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center md:hidden">
+                <a href="projects/" class="btn-primary w-full text-xl py-4">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-canvas">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Review Content -->
+            <div>
+                <p class="text-action font-mono font-bold tracking-widest uppercase mb-2 text-sm">Testimonials</p>
+                <h2 class="text-5xl md:text-6xl font-heading text-ink mb-8 leading-none">WHAT CUSTOMERS<br>ARE SAYING</h2>
+                
+                <div class="bg-structure p-8 border-4 border-ink shadow-solid-lg relative">
+                    <div class="absolute -top-4 -left-4 bg-action text-canvas px-4 py-2 border-3 border-ink flex items-center gap-2" style="border: 3px solid #000;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    
+                    <i class="fas fa-quote-left text-ink/10 text-6xl absolute top-4 right-4"></i>
+                    
+                    <p class="text-2xl font-heading text-ink mb-6 relative z-10 leading-relaxed mt-4">
+                        "T and M provided above and beyond quality service… Great prices, honest, very knowledgeable. I will definitely be coming back for any welding needs."
+                    </p>
+                    
+                    <div class="flex items-center gap-4 border-t-2 border-ink/20 pt-4">
+                        <div class="font-heading text-lg text-ink uppercase">— Mey M., San Diego</div>
+                        <div class="ml-auto">
+                            <i class="fab fa-yelp text-red-600 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mt-8">
+                    <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        <i class="fab fa-yelp mr-2"></i> Read Reviews on Yelp
+                    </a>
+                    <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                        Leave a Review
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="relative hidden lg:block">
+                <div class="absolute inset-0 bg-action translate-x-4 translate-y-4"></div>
+                <div class="relative border-4 border-ink">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+                        class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        alt="Welder at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-16 bg-structure border-t-4 border-b-4 border-ink">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-4xl font-heading text-ink mb-4">SERVING SAN DIEGO & SURROUNDING AREAS</h2>
+            <p class="text-lg text-ink/70 max-w-2xl mx-auto">
+                Proudly serving San Diego, Imperial County, and Orange County. Mobile welding available for larger jobs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Strong CTA Section -->
+    <section class="py-24 bg-ink relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#FF5500_1px,transparent_1px)] [background-size:32px_32px]"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-heading text-canvas mb-6 leading-none">
+                NEED WELDING<br><span class="text-action">DONE RIGHT?</span>
+            </h2>
+            <p class="text-xl text-canvas/80 mb-10 max-w-2xl mx-auto">
+                From quick repairs to full custom fabrication — call today for honest pricing and quality work.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5 bg-action text-canvas border-canvas">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+                <a href="contact/" class="btn-secondary text-2xl px-10 py-5 text-canvas border-canvas hover:bg-canvas hover:text-ink">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-canvas py-16 border-t-8 border-action">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Brand -->
+            <div>
+                <a href="./" class="flex items-center gap-3 mb-6 group">
+                    <div class="bg-action text-canvas p-2 border-3 border-canvas" style="border: 3px solid #fff;">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <span class="text-3xl font-heading text-canvas group-hover:text-action transition-colors">T & M WELDING</span>
+                </a>
+                <p class="text-canvas/60 mb-4">
+                    Certified Welder · License #1148505<br>
+                    18+ Years Experience
+                </p>
+                <p class="text-canvas/60 text-sm">
+                    Custom welding and metal fabrication serving San Diego.
+                </p>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">SERVICES</h4>
+                <ul class="space-y-3 text-canvas/70">
+                    <li><a href="services/" class="hover:text-action transition-colors">Metal Fabrication</a></li>
+                    <li><a href="services/" class="hover:text-action transition-colors">Welding Repairs</a></li>
+                    <li><a href="services/" class="hover:text-action transition-colors">Exhaust Welding</a></li>
+                    <li><a href="services/" class="hover:text-action transition-colors">Trailers & Hitches</a></li>
+                    <li><a href="services/" class="hover:text-action transition-colors">BBQ Grills & Smokers</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">COMPANY</h4>
+                <ul class="space-y-3 text-canvas/70">
+                    <li><a href="services/" class="hover:text-action transition-colors">Services</a></li>
+                    <li><a href="projects/" class="hover:text-action transition-colors">Projects</a></li>
+                    <li><a href="about/" class="hover:text-action transition-colors">About</a></li>
+                    <li><a href="contact/" class="hover:text-action transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-heading text-xl text-action mb-6 tracking-wide">CONTACT</h4>
+                <ul class="space-y-4 text-canvas/70">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-action mt-1"></i>
+                        <span>San Diego, CA 92114</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-action"></i>
+                        <a href="tel:6194057892" class="hover:text-action transition-colors font-heading text-lg text-canvas">(619) 405-7892</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-clock text-action"></i>
+                        <span class="text-sm">Mon-Sun: 6AM - 7PM</span>
+                    </li>
+                </ul>
+                
+                <div class="flex gap-4 mt-6">
+                    <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-canvas/10 border-2 border-canvas/30 flex items-center justify-center hover:bg-action hover:border-action transition-colors">
+                        <i class="fab fa-yelp"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-canvas/10 border-2 border-canvas/30 flex items-center justify-center hover:bg-action hover:border-action transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-canvas/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-canvas/30 text-sm font-mono">© 2026 T & M Welding. All rights reserved.</p>
+            <p class="text-canvas/30 text-sm font-mono">License #1148505</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="fixed inset-0 z-[60] hidden bg-ink/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="modal-container bg-canvas border-4 border-ink w-full max-w-lg shadow-solid-lg relative overflow-hidden">
+            <button data-close="modal" class="absolute top-4 right-4 text-ink hover:text-action transition-colors border-3 border-ink p-1 hover:bg-action hover:text-canvas z-10 w-10 h-10 flex items-center justify-center" style="border: 3px solid #000;">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="p-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-action text-canvas text-xs font-bold uppercase tracking-wider mb-4 border-2 border-ink">
+                    <i class="fas fa-fire"></i> Free Quote
+                </div>
+                <h3 class="text-4xl font-heading text-ink mb-2">GET YOUR QUOTE</h3>
+                <p class="text-ink/70 text-sm mb-6">Fast, accurate, and honest pricing. No obligation.</p>
+                <form class="space-y-4" action="#" method="POST">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative">
+                            <label class="absolute -top-2 left-2 bg-canvas px-1 text-[10px] font-bold text-ink uppercase border border-ink">Name</label>
+                            <input type="text" name="name" required class="form-input pt-3">
+                        </div>
+                        <div class="relative">
+                            <label class="absolute -top-2 left-2 bg-canvas px-1 text-[10px] font-bold text-ink uppercase border border-ink">Phone</label>
+                            <input type="tel" name="phone" required class="form-input pt-3">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="absolute -top-2 left-2 bg-canvas px-1 text-[10px] font-bold text-ink uppercase border border-ink">Email</label>
+                        <input type="email" name="email" required class="form-input pt-3">
+                    </div>
+                    <div class="relative">
+                        <select name="service" class="form-input">
+                            <option value="" disabled selected>SERVICE NEEDED?</option>
+                            <option value="Metal Fabrication">Metal Fabrication</option>
+                            <option value="Welding Repairs">Welding Repairs</option>
+                            <option value="Exhaust Welding">Exhaust Welding</option>
+                            <option value="Trailers & Hitches">Trailers & Hitches</option>
+                            <option value="BBQ Grills">BBQ Grills & Smokers</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <textarea name="message" placeholder="DESCRIBE YOUR PROJECT..." rows="3" class="form-input"></textarea>
+                    <button type="submit" class="btn-primary w-full text-xl py-4">
+                        Submit Request <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <p class="text-center text-xs text-ink/40 font-mono">Your information is secure.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button id="fab-cta" class="fab-conversion hidden md:flex" aria-label="Get Free Quote">
+        <i class="fas fa-fire text-2xl"></i>
+    </button>
+
+    <!-- Mobile Sticky CTA -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta md:hidden">
+        <a href="tel:6194057892" class="btn-primary w-full text-center text-xl py-4">
+            <i class="fas fa-phone-alt mr-2"></i> Call (619) 405-7892
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
