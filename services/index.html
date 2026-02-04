@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welding & Fabrication Services | T & M Welding San Diego</title>
+    <title>Welding & Fabrication Services | T&M Welding San Diego</title>
     <meta name="description"
         content="Professional welding and metal fabrication services in San Diego. Exhaust welding, trailers, hand rails, BBQ grills, custom brackets, and more. Call (619) 405-7892.">
     <meta name="keywords"
@@ -12,12 +12,12 @@
     <link rel="canonical" href="https://tmwelding.com/services/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Welding Services | T & M Welding">
+    <meta property="og:title" content="Welding Services | T&M Welding">
     <meta property="og:description" content="Professional welding and metal fabrication services in San Diego.">
     <meta property="og:url" content="https://tmwelding.com/services/">
     <meta property="og:type" content="website">
 
-    <!-- Design System -->
+    <!-- Design System: PrecisionStrike -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,19 +26,28 @@
                     colors: {
                         charcoal: '#0E0E0F',
                         steel: '#1E1F23',
+                        'steel-light': '#2A2B30',
                         concrete: '#8A8F98',
                         signal: '#FF6A00',
+                        'signal-hot': '#FF7A1A',
                         offwhite: '#F5F6F7',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'Bebas Neue', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Bebas Neue', 'Impact', 'sans-serif'],
                         mono: ['JetBrains Mono', 'Roboto Mono', 'monospace'],
                     },
+                    borderRadius: {
+                        'sm': '8px',
+                        'md': '10px',
+                        'lg': '12px',
+                        'xl': '16px',
+                    },
                     boxShadow: {
-                        'edge': '0 2px 8px rgba(0, 0, 0, 0.2)',
-                        'cut': '0 4px 16px rgba(0, 0, 0, 0.15)',
-                        'strike': '0 0 30px rgba(255, 85, 0, 0.4)',
+                        'sm': '0 2px 4px rgba(0,0,0,0.3)',
+                        'md': '0 4px 12px rgba(0,0,0,0.4)',
+                        'lg': '0 8px 24px rgba(0,0,0,0.5)',
+                        'glow': '0 0 20px rgba(255, 106, 0, 0.15)',
                     }
                 }
             }
@@ -54,7 +63,7 @@
 <body class="bg-charcoal text-offwhite">
 
     <!-- Top Utility Strip -->
-    <div class="bg-ink text-canvas py-2 text-center">
+    <div class="bg-steel text-offwhite py-2 text-center border-b border-white/5">
         <div
             class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-mono">
             <span class="flex items-center gap-2">
@@ -73,45 +82,32 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="bg-charcoal border-b-3 border-white/10 sticky top-0 z-50" style="border-bottom: 3px solid #000;">
+    <nav class="bg-charcoal sticky top-0 z-50 border-b border-white/5">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Brand -->
-                <a href="../" class="flex items-center gap-3 group">
-                    <div class="bg-signal text-canvas p-2 border-3 border-white/10" style="border: 3px solid #000;">
-                        <i class="fas fa-fire text-2xl"></i>
-                    </div>
-                    <div class="flex flex-col leading-none">
-                        <span
-                            class="text-3xl md:text-4xl font-heading text-offwhite group-hover:text-signal transition-colors tracking-wide">T
-                            & M WELDING</span>
-                    </div>
+                <a href="../" class="flex items-center group">
+                    <img src="../logo.jpg" alt="T&M Welding" class="h-12 md:h-14 w-auto">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="../"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">HOME</a>
-                    <a href="./" class="font-heading text-xl text-signal border-b-3 border-signal tracking-wide"
-                        style="border-bottom: 3px solid #FF5500;">CAPABILITIES</a>
-                    <a href="../projects/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">BUILDS</a>
-                    <a href="../about/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">THE OPERATOR</a>
-                    <a href="../contact/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">GET IT DONE</a>
+                    <a href="../" class="nav-link">HOME</a>
+                    <a href="./" class="nav-link text-signal">SERVICES</a>
+                    <a href="../projects/" class="nav-link">BUILDS</a>
+                    <a href="../about/" class="nav-link">ABOUT</a>
+                    <a href="../contact/" class="nav-link">GET IT DONE</a>
 
                     <div class="flex items-center gap-3 ml-4">
                         <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3">
-                            <i class="fas fa-phone-alt"></i> STRIKE A CALL
+                            <i class="fas fa-phone-alt"></i> CALL NOW
                         </a>
                     </div>
                 </div>
 
                 <!-- Mobile Trigger -->
                 <button id="mobile-menu-btn"
-                    class="lg:hidden text-offwhite p-2 border-3 border-white/10 hover:bg-signal hover:text-canvas transition-colors"
-                    style="border: 3px solid #000;">
+                    class="lg:hidden text-offwhite p-2 rounded-sm border border-white/10 hover:bg-signal hover:text-charcoal transition-colors">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -121,65 +117,61 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu-wrapper lg:hidden flex flex-col pt-10 px-6 space-y-6">
         <a href="../"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">HOME</a>
-        <a href="./" class="text-2xl font-heading text-signal tracking-wide">CAPABILITIES</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">HOME</a>
+        <a href="./" class="text-2xl font-heading text-signal tracking-wide">SERVICES</a>
         <a href="../projects/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">BUILDS</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">BUILDS</a>
         <a href="../about/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">THE OPERATOR</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">ABOUT</a>
         <a href="../contact/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">GET IT DONE</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">GET IT
+            DONE</a>
         <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4">
             <i class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892
         </a>
     </div>
 
     <!-- Hero -->
-    <header class="relative bg-ink pt-32 pb-20 overflow-hidden text-center border-b-4 border-signal">
-        <div class="absolute inset-0 opacity-20">
+    <header class="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80"
-                class="w-full h-full object-cover grayscale" alt="Welding background">
+                class="w-full h-full object-cover" alt="Welding background">
+            <div class="hero-overlay absolute inset-0"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto px-4">
-            <div class="inline-block bg-signal px-4 py-2 text-canvas font-mono font-bold uppercase text-sm mb-4 border-3 border-canvas"
-                style="border: 3px solid #fff;">
-                <i class="fas fa-fire mr-2"></i> MIG Welding · Argon & CO₂
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-steel/80 backdrop-blur-sm rounded-sm border border-white/10 text-sm font-mono mb-6">
+                <i class="fas fa-fire text-signal"></i>
+                <span class="text-offwhite">MIG Welding · Argon & CO₂</span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-heading text-canvas mb-6">PROFESSIONAL WELDING &<br>METAL FABRICATION
-                SERVICES</h1>
-            <p class="text-xl text-canvas/80 max-w-3xl mx-auto">
-                I am a Certified Welder with 18 years of welding and fabrication experience. I specialize in repairs,
-                custom fabrication, and metal work of all kinds using MIG welding with Argon and CO₂ for clean, strong
-                welds.
+            <h1 class="text-5xl md:text-7xl font-heading text-offwhite mb-6">PROFESSIONAL WELDING &<br>METAL FABRICATION
+            </h1>
+            <p class="text-xl text-offwhite/80 max-w-3xl mx-auto">
+                Certified Welder with 18+ years experience. Repairs, custom fabrication, and metal work of all kinds
+                using MIG welding for clean, strong welds.
             </p>
         </div>
     </header>
 
-    <main class="py-16 bg-charcoal relative">
-        <div
-            class="absolute inset-0 bg-[radial-gradient(#e5e5e5_1px,transparent_1px)] [background-size:16px_16px] opacity-50 pointer-events-none">
-        </div>
-        <div class="max-w-[1400px] mx-auto px-4 md:px-8 space-y-12 relative z-10">
+    <main class="py-16 bg-charcoal">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 space-y-8">
 
             <!-- Service Block 1: Metal Fabrication -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto border-b-4 lg:border-b-0 lg:border-r-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Metal Fabrication">
-                    <div class="absolute top-4 left-4 bg-signal border-3 border-white/10 px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #000;">
+                        class="w-full h-full object-cover transition-all duration-500" alt="Metal Fabrication">
+                    <div
+                        class="absolute top-4 left-4 bg-signal text-charcoal px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm">
                         01. Fabrication
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
                     <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">METAL FABRICATION</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
                         Custom metal fabrication for any project. Whether you need structural components, decorative
-                        pieces, or industrial equipment, I build it to your exact specifications. Strong, precise, and
-                        built to last.
+                        pieces, or industrial equipment, I build it to your exact specifications.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -188,23 +180,21 @@
             </div>
 
             <!-- Service Block 2: Exhaust Welding -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 border-b-4 lg:border-b-0 lg:border-l-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 overflow-hidden rounded-t-lg lg:rounded-r-lg lg:rounded-tl-none">
                     <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Exhaust Welding">
-                    <div class="absolute top-4 right-4 bg-ink border-3 border-canvas px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #fff;">
+                        class="w-full h-full object-cover transition-all duration-500" alt="Exhaust Welding">
+                    <div
+                        class="absolute top-4 right-4 bg-steel-light text-offwhite px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm border border-white/10">
                         02. Exhaust
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center lg:order-1">
                     <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">EXHAUST WELDING & MUFFLERS</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
-                        Expert exhaust system repairs and custom exhaust work. From patching holes and fixing leaks to
-                        custom performance exhaust modifications. Clean welds that won't leak.
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
+                        Expert exhaust system repairs and custom exhaust work. From patching holes to custom performance
+                        modifications. Clean welds that won't leak.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -213,23 +203,21 @@
             </div>
 
             <!-- Service Block 3: Trailers & Hitches -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto border-b-4 lg:border-b-0 lg:border-r-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none">
                     <img src="https://images.unsplash.com/photo-1558618047-f4b511d0f5c3?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Trailers and Hitches">
-                    <div class="absolute top-4 left-4 bg-signal border-3 border-white/10 px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #000;">
+                        class="w-full h-full object-cover transition-all duration-500" alt="Trailers and Hitches">
+                    <div
+                        class="absolute top-4 left-4 bg-signal text-charcoal px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm">
                         03. Trailers
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
                     <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">TRAILERS & HITCHES</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
                         Trailer repairs, hitch installation, and custom trailer fabrication. Fix rusted frames, broken
-                        tongues, damaged flooring, and more. Heavy-duty work built for real use.
+                        tongues, damaged flooring, and more.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -238,23 +226,21 @@
             </div>
 
             <!-- Service Block 4: Hand Rails & Iron Work -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 border-b-4 lg:border-b-0 lg:border-l-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 overflow-hidden rounded-t-lg lg:rounded-r-lg lg:rounded-tl-none">
                     <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Hand Rails and Iron Work">
-                    <div class="absolute top-4 right-4 bg-ink border-3 border-canvas px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #fff;">
+                        class="w-full h-full object-cover transition-all duration-500" alt="Hand Rails and Iron Work">
+                    <div
+                        class="absolute top-4 right-4 bg-steel-light text-offwhite px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm border border-white/10">
                         04. Iron Work
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center lg:order-1">
                     <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">HAND RAILS & IRON WORK</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
-                        Custom handrails, stair railings, and decorative iron work. Whether you need safety railings for
-                        code compliance or custom decorative pieces, I build to your design.
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
+                        Custom handrails, stair railings, and decorative iron work. Safety railings for code compliance
+                        or custom decorative pieces.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -263,23 +249,21 @@
             </div>
 
             <!-- Service Block 5: Security Gates & Fences -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto border-b-4 lg:border-b-0 lg:border-r-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none">
                     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Security Gates and Fences">
-                    <div class="absolute top-4 left-4 bg-signal border-3 border-white/10 px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #000;">
+                        class="w-full h-full object-cover transition-all duration-500" alt="Security Gates and Fences">
+                    <div
+                        class="absolute top-4 left-4 bg-signal text-charcoal px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm">
                         05. Security
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
                     <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">SECURITY GATES & FENCES</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
                         Heavy-duty security gates, driveway gates, and metal fencing. Built tough to protect your
-                        property. Custom designs available to match your style.
+                        property. Custom designs available.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -287,74 +271,22 @@
                 </div>
             </div>
 
-            <!-- Service Block 6: Custom Brackets & Plates -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
+            <!-- Service Block 6: BBQ Grills & Smokers -->
+            <div class="card-steel flex flex-col lg:flex-row group">
                 <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 border-b-4 lg:border-b-0 lg:border-l-4 border-white/10 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Custom Brackets and Plates">
-                    <div class="absolute top-4 right-4 bg-ink border-3 border-canvas px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #fff;">
-                        06. Brackets
-                    </div>
-                </div>
-                <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center lg:order-1">
-                    <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">CUSTOM BRACKETS & PLATES</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
-                        Precision-cut brackets, mounting plates, and structural components. From single pieces to
-                        production runs. Measured and built to your exact specifications.
-                    </p>
-                    <a href="tel:6194057892" class="btn-primary self-start">
-                        <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
-                    </a>
-                </div>
-            </div>
-
-            <!-- Service Block 7: BBQ Grills & Smokers -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
-                <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto border-b-4 lg:border-b-0 lg:border-r-4 border-white/10 overflow-hidden">
+                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 overflow-hidden rounded-t-lg lg:rounded-r-lg lg:rounded-tl-none">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="BBQ Grills and Smokers">
-                    <div class="absolute top-4 left-4 bg-signal border-3 border-white/10 px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #000;">
-                        07. BBQ
-                    </div>
-                </div>
-                <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
-                    <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">BBQ GRILLS & SMOKERS</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
-                        Custom-built BBQ grills, smokers, and outdoor cooking equipment. Heavy-gauge steel construction
-                        that handles the heat. Built to your size and style preferences.
-                    </p>
-                    <a href="tel:6194057892" class="btn-primary self-start">
-                        <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
-                    </a>
-                </div>
-            </div>
-
-            <!-- Service Block 8: Reinforcements & Repairs -->
-            <div
-                class="bg-charcoal border-4 border-white/10 shadow-solid-lg flex flex-col lg:flex-row group hover:-translate-y-1 transition-transform duration-300">
-                <div
-                    class="lg:w-1/3 relative h-64 lg:h-auto lg:order-2 border-b-4 lg:border-b-0 lg:border-l-4 border-white/10 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        alt="Reinforcements and Repairs">
-                    <div class="absolute top-4 right-4 bg-ink border-3 border-canvas px-3 py-1 text-canvas font-mono font-bold uppercase text-xs"
-                        style="border: 3px solid #fff;">
-                        08. Repairs
+                        class="w-full h-full object-cover transition-all duration-500" alt="BBQ Grills and Smokers">
+                    <div
+                        class="absolute top-4 right-4 bg-steel-light text-offwhite px-3 py-1 font-mono text-xs font-bold uppercase rounded-sm border border-white/10">
+                        06. BBQ
                     </div>
                 </div>
                 <div class="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center lg:order-1">
-                    <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">REINFORCEMENTS & STRUCTURAL REPAIRS</h2>
-                    <p class="text-offwhite/80 mb-6 max-w-2xl text-lg leading-relaxed">
-                        Structural reinforcements, load-bearing modifications, and heavy-duty repairs. Fix what's
-                        broken, strengthen what's weak. Built to handle the load.
+                    <h2 class="text-4xl md:text-5xl font-heading text-offwhite mb-4">BBQ GRILLS & SMOKERS</h2>
+                    <p class="text-concrete mb-6 max-w-2xl text-lg leading-relaxed">
+                        Custom-built BBQ grills, smokers, and outdoor cooking equipment. Heavy-gauge steel that handles
+                        the heat.
                     </p>
                     <a href="tel:6194057892" class="btn-primary self-start">
                         <i class="fas fa-phone-alt mr-2"></i> Call for Pricing
@@ -366,20 +298,24 @@
     </main>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-ink">
-        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
-            <h2 class="text-5xl md:text-6xl font-heading text-canvas mb-6">
+    <section class="py-24 bg-steel relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,#FF6A00_1px,transparent_1px)] [background-size:32px_32px]">
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-6">
                 NEED A CUSTOM JOB?<br><span class="text-signal">LET'S TALK.</span>
             </h2>
-            <p class="text-xl text-canvas/80 mb-10 max-w-2xl mx-auto">
+            <p class="text-xl text-concrete mb-10 max-w-2xl mx-auto">
                 If you don't see what you need listed, call me. I take on all kinds of metal work and welding projects.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5 bg-signal text-canvas border-canvas">
+                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5">
                     <i class="fas fa-phone-alt"></i> Call (619) 405-7892
                 </a>
-                <a href="../contact/"
-                    class="btn-secondary text-2xl px-10 py-5 text-canvas border-canvas hover:bg-charcoal hover:text-offwhite">
+                <a href="../contact/" class="btn-secondary text-2xl px-10 py-5">
                     Get a Quote
                 </a>
             </div>
@@ -387,18 +323,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ink text-canvas py-16 border-t-8 border-signal">
+    <footer class="bg-charcoal text-offwhite py-16 border-t-2 border-signal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <!-- Brand -->
             <div>
-                <a href="../" class="flex items-center gap-3 mb-6 group">
-                    <div class="bg-signal text-canvas p-2 border-3 border-canvas" style="border: 3px solid #fff;">
-                        <i class="fas fa-fire text-2xl"></i>
-                    </div>
-                    <span class="text-3xl font-heading text-canvas group-hover:text-signal transition-colors">T & M
-                        WELDING</span>
+                <a href="../" class="flex items-center mb-6 group">
+                    <img src="../logo.jpg" alt="T&M Welding" class="h-12 w-auto">
                 </a>
-                <p class="text-canvas/60 mb-4">
+                <p class="text-concrete mb-4">
                     Certified Welder · License #1148505<br>
                     18+ Years Experience
                 </p>
@@ -406,8 +338,8 @@
 
             <!-- Services -->
             <div>
-                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">CAPABILITIES</h4>
-                <ul class="space-y-3 text-canvas/70">
+                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">SERVICES</h4>
+                <ul class="space-y-3 text-concrete">
                     <li><a href="./" class="hover:text-signal transition-colors">Metal Fabrication</a></li>
                     <li><a href="./" class="hover:text-signal transition-colors">Exhaust Welding</a></li>
                     <li><a href="./" class="hover:text-signal transition-colors">Trailers & Hitches</a></li>
@@ -418,18 +350,18 @@
             <!-- Company -->
             <div>
                 <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">COMPANY</h4>
-                <ul class="space-y-3 text-canvas/70">
+                <ul class="space-y-3 text-concrete">
                     <li><a href="./" class="hover:text-signal transition-colors">Services</a></li>
-                    <li><a href="../projects/" class="hover:text-signal transition-colors">Projects</a></li>
+                    <li><a href="../projects/" class="hover:text-signal transition-colors">Builds</a></li>
                     <li><a href="../about/" class="hover:text-signal transition-colors">About</a></li>
-                    <li><a href="../contact/" class="hover:text-signal transition-colors">Contact</a></li>
+                    <li><a href="../contact/" class="hover:text-signal transition-colors">Get It Done</a></li>
                 </ul>
             </div>
 
             <!-- Contact -->
             <div>
-                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">GET IT DONE</h4>
-                <ul class="space-y-4 text-canvas/70">
+                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">CONTACT</h4>
+                <ul class="space-y-4 text-concrete">
                     <li class="flex items-start gap-3">
                         <i class="fas fa-map-marker-alt text-signal mt-1"></i>
                         <span>San Diego, CA 92114</span>
@@ -437,7 +369,7 @@
                     <li class="flex items-center gap-3">
                         <i class="fas fa-phone-alt text-signal"></i>
                         <a href="tel:6194057892"
-                            class="hover:text-signal transition-colors font-heading text-lg text-canvas">(619)
+                            class="hover:text-signal transition-colors font-heading text-lg text-offwhite">(619)
                             405-7892</a>
                     </li>
                 </ul>
@@ -445,9 +377,9 @@
         </div>
 
         <div
-            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-canvas/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-canvas/30 text-sm font-mono">© 2026 T & M Welding. All rights reserved.</p>
-            <p class="text-canvas/30 text-sm font-mono">License #1148505</p>
+            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-concrete text-sm font-mono">© 2026 T&M Welding. All rights reserved.</p>
+            <p class="text-concrete text-sm font-mono">License #1148505</p>
         </div>
     </footer>
 

@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="T & M Welding | San Diego">
     <meta name="twitter:description" content="Custom welding and metal fabrication you can trust.">
 
-    <!-- Design System -->
+    <!-- Design System: PrecisionStrike -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,25 +32,28 @@
                     colors: {
                         charcoal: '#0E0E0F',
                         steel: '#1E1F23',
+                        'steel-light': '#2A2B30',
                         concrete: '#8A8F98',
                         signal: '#FF6A00',
+                        'signal-hot': '#FF7A1A',
                         offwhite: '#F5F6F7',
-                        electricred: '#E53935',
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
-                        heading: ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif'],
+                        heading: ['Bebas Neue', 'Impact', 'sans-serif'],
                         mono: ['JetBrains Mono', 'Roboto Mono', 'monospace'],
                     },
-                    boxShadow: {
-                        'card': '0 4px 24px rgba(0, 0, 0, 0.4)',
-                        'float': '0 8px 32px rgba(0, 0, 0, 0.5)',
-                        'glow': '0 0 20px rgba(255, 106, 0, 0.3)',
-                    },
                     borderRadius: {
-                        'button': '8px',
-                        'card': '12px',
-                        'image': '16px',
+                        'sm': '8px',
+                        'md': '10px',
+                        'lg': '12px',
+                        'xl': '16px',
+                    },
+                    boxShadow: {
+                        'sm': '0 2px 4px rgba(0,0,0,0.3)',
+                        'md': '0 4px 12px rgba(0,0,0,0.4)',
+                        'lg': '0 8px 24px rgba(0,0,0,0.5)',
+                        'glow': '0 0 20px rgba(255, 106, 0, 0.15)',
                     }
                 }
             }
@@ -66,7 +69,7 @@
 <body class="bg-charcoal text-offwhite">
 
     <!-- Top Utility Strip -->
-    <div class="bg-steel text-offwhite py-2 text-center border-b border-white/10">
+    <div class="bg-steel text-offwhite py-2 text-center border-b border-white/5">
         <div
             class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-mono">
             <span class="flex items-center gap-2">
@@ -85,40 +88,34 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="bg-charcoal/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <nav class="bg-charcoal sticky top-0 z-50 border-b border-white/5">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Brand -->
-                <a href="./" class="flex items-center gap-3 group">
-                    <img src="images/logo.png" alt="T&M Welding" class="h-12 md:h-14">
+                <a href="./" class="flex items-center group">
+                    <img src="logo.jpg" alt="T&M Welding" class="h-12 md:h-14 w-auto">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="services/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">CAPABILITIES</a>
-                    <a href="projects/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">BUILDS</a>
-                    <a href="about/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">THE
-                        OPERATOR</a>
-                    <a href="contact/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">GET
-                        IT DONE</a>
+                    <a href="services/" class="nav-link">SERVICES</a>
+                    <a href="projects/" class="nav-link">BUILDS</a>
+                    <a href="about/" class="nav-link">ABOUT</a>
+                    <a href="contact/" class="nav-link">GET IT DONE</a>
 
                     <div class="flex items-center gap-3 ml-4">
-                        <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3 rounded-button">
-                            <i class="fas fa-phone-alt"></i> STRIKE A CALL
+                        <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3">
+                            <i class="fas fa-phone-alt"></i> CALL NOW
                         </a>
-                        <a href="contact/" class="btn-secondary text-lg px-6 py-3 rounded-button">
-                            REQUEST FABRICATION
+                        <a href="contact/" class="btn-secondary text-lg px-6 py-3">
+                            GET QUOTE
                         </a>
                     </div>
                 </div>
 
                 <!-- Mobile Trigger -->
                 <button id="mobile-menu-btn"
-                    class="lg:hidden text-offwhite p-2 border border-white/20 rounded-button hover:bg-signal hover:text-charcoal transition-colors">
+                    class="lg:hidden text-offwhite p-2 rounded-sm border border-white/10 hover:bg-signal hover:text-charcoal transition-colors">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -129,131 +126,110 @@
     <div id="mobile-menu" class="mobile-menu-wrapper lg:hidden flex flex-col pt-10 px-6 space-y-6">
         <a href="./" class="text-2xl font-heading text-signal tracking-wide">HOME</a>
         <a href="services/"
-            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">CAPABILITIES</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">SERVICES</a>
         <a href="projects/"
             class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">BUILDS</a>
         <a href="about/"
-            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">THE
-            OPERATOR</a>
+            class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">ABOUT</a>
         <a href="contact/"
             class="text-2xl font-heading text-offwhite tracking-wide hover:text-signal transition-colors">GET IT
             DONE</a>
-        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4 rounded-button">
-            <i class="fas fa-phone-alt mr-2"></i> STRIKE A CALL
+        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4">
+            <i class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892
         </a>
     </div>
 
-    <!-- Hero Section -->
-    <header class="relative min-h-[90vh] overflow-hidden"
-        style="background: linear-gradient(90deg, rgba(14,14,15,0.92) 0%, rgba(14,14,15,0.6) 50%, rgba(14,14,15,0.4) 100%), url('assets/images/hero-welding.jpg'); background-size: cover; background-position: center;">
-        <div
-            class="max-w-[1400px] mx-auto px-4 md:px-8 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+    <!-- Hero Section — Full Width with Floating Form -->
+    <header class="relative min-h-[85vh] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80"
+                class="w-full h-full object-cover" alt="Welding sparks">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
 
-            <!-- Left Copy (3 cols) -->
-            <div class="z-10 relative lg:col-span-3">
-                <div
-                    class="inline-block bg-steel text-offwhite px-4 py-2 font-mono text-sm font-bold uppercase mb-6 rounded-button border border-white/10">
-                    <i class="fas fa-certificate mr-2 text-signal"></i> Certified Welder · 18+ Years
+        <div class="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8 py-16 lg:py-24 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-steel/80 backdrop-blur-sm rounded-sm border border-white/10 text-sm font-mono">
+                        <i class="fas fa-certificate text-signal"></i>
+                        <span class="text-offwhite">Certified Welder · 18+ Years</span>
+                    </div>
+
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-heading text-offwhite leading-none">
+                        T & M<br><span class="text-signal">WELDING</span>
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-offwhite/80 max-w-lg">
+                        Custom metal fabrication and welding done right the first time. San Diego's trusted choice.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:6194057892" class="btn-primary text-xl px-8 py-4">
+                            <i class="fas fa-phone-alt"></i> Call (619) 405-7892
+                        </a>
+                        <a href="services/" class="btn-secondary text-xl px-8 py-4">
+                            View Services
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <div class="trust-badge">
+                            <i class="fab fa-yelp text-red-500"></i>
+                            <span>5.0 Rating</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Licensed #1148505</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-bolt text-signal"></i>
+                            <span>Fast Turnaround</span>
+                        </div>
+                    </div>
                 </div>
 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none font-heading text-offwhite">
-                    PRECISION<br>FABRICATION
-                </h1>
-
-                <p class="text-2xl md:text-3xl font-heading text-concrete mb-4 tracking-wide">
-                    Built Fast. Precision Guaranteed.
-                </p>
-
-                <p class="text-lg text-concrete mb-8 max-w-lg border-l-4 border-signal pl-4">
-                    San Diego's trusted metal fabrication and welding. No waste pricing, rapid turnaround, master
-                    craftsmanship.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                    <a href="tel:6194057892" class="btn-primary text-xl px-8 py-4 rounded-button">
-                        <i class="fas fa-phone-alt"></i> Strike a Call
-                    </a>
-                    <a href="contact/" class="btn-secondary text-xl px-8 py-4 rounded-button">
-                        Request Fabrication
-                    </a>
-                </div>
-
-                <!-- Trust Row -->
-                <div class="flex flex-wrap items-center gap-3">
+                <!-- Right: Floating Quote Form -->
+                <div class="hero-form p-6 md:p-8 lg:mt-8">
                     <div
-                        class="bg-steel/80 border border-white/10 px-3 py-2 rounded-button flex items-center gap-2 text-sm">
-                        <i class="fab fa-yelp text-red-500"></i>
-                        <span class="text-offwhite">5.0 Rating</span>
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-signal text-charcoal text-xs font-bold uppercase tracking-wider mb-4 rounded-sm">
+                        <i class="fas fa-fire"></i> Free Quote
                     </div>
-                    <div
-                        class="bg-steel/80 border border-white/10 px-3 py-2 rounded-button flex items-center gap-2 text-sm">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="text-offwhite">No Waste Pricing</span>
-                    </div>
-                    <div
-                        class="bg-steel/80 border border-white/10 px-3 py-2 rounded-button flex items-center gap-2 text-sm">
-                        <i class="fas fa-bolt text-signal"></i>
-                        <span class="text-offwhite">Built Fast</span>
-                    </div>
-                </div>
-            </div>
+                    <h3 class="text-3xl font-heading text-offwhite mb-2">GET YOUR QUOTE</h3>
+                    <p class="text-concrete text-sm mb-6">Fast response. Honest pricing. No obligation.</p>
 
-            <!-- Right: Floating Quote Form (2 cols) -->
-            <div class="lg:col-span-2 hidden lg:block">
-                <div class="quote-form-card p-6">
-                    <h3 class="text-2xl font-heading text-offwhite mb-4">REQUEST FABRICATION</h3>
-                    <p class="text-concrete text-sm mb-6">Get a no-obligation quote within 24 hours.</p>
-                    <form action="#" method="POST" class="space-y-4">
-                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
-                        <input type="tel" name="phone" placeholder="Phone Number" required class="form-input">
-                        <input type="email" name="email" placeholder="Email Address" required class="form-input">
-                        <textarea name="message" placeholder="Describe your project..." rows="3"
-                            class="form-input resize-none"></textarea>
-                        <button type="submit" class="btn-primary w-full py-4 text-lg rounded-button">
-                            SEND IT
+                    <form class="space-y-4" action="#" method="POST">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="NAME" required class="form-input">
+                            <input type="tel" name="phone" placeholder="PHONE" required class="form-input">
+                        </div>
+                        <input type="email" name="email" placeholder="EMAIL" required class="form-input">
+                        <select name="service" class="form-input">
+                            <option value="" disabled selected>SERVICE NEEDED?</option>
+                            <option value="Metal Fabrication">Metal Fabrication</option>
+                            <option value="Welding Repairs">Welding Repairs</option>
+                            <option value="Exhaust Welding">Exhaust Welding</option>
+                            <option value="Trailers & Hitches">Trailers & Hitches</option>
+                            <option value="BBQ Grills">BBQ Grills & Smokers</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <textarea name="message" placeholder="DESCRIBE YOUR PROJECT..." rows="3"
+                            class="form-input"></textarea>
+                        <button type="submit" class="btn-primary w-full text-xl py-4">
+                            Submit Request <i class="fas fa-arrow-right ml-2"></i>
                         </button>
+                        <p class="text-center text-xs text-concrete">Your information is secure.</p>
                     </form>
                 </div>
             </div>
-
         </div>
     </header>
 
-    <!-- Quick Quote Bar -->
-    <section class="relative z-30 -mt-8 px-4 mb-20">
-        <div class="max-w-[1400px] mx-auto">
-            <div class="bg-charcoal border-4 border-white/10 shadow-solid-lg p-4 md:p-6">
-                <form action="#" method="POST" class="flex flex-col lg:flex-row gap-4 items-stretch">
-                    <div class="flex-1 flex flex-col md:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <label
-                                class="absolute -top-3 left-4 bg-charcoal px-2 text-xs font-bold text-offwhite uppercase border-2 border-white/10">Name</label>
-                            <input type="text" name="name" placeholder="YOUR NAME" required
-                                class="form-input w-full h-14 text-sm">
-                        </div>
-                        <div class="flex-1 relative">
-                            <label
-                                class="absolute -top-3 left-4 bg-charcoal px-2 text-xs font-bold text-offwhite uppercase border-2 border-white/10">Phone</label>
-                            <input type="tel" name="phone" placeholder="(555) 555-5555" required
-                                class="form-input w-full h-14 text-sm">
-                        </div>
-                        <div class="flex-1 relative">
-                            <label
-                                class="absolute -top-3 left-4 bg-charcoal px-2 text-xs font-bold text-offwhite uppercase border-2 border-white/10">Email</label>
-                            <input type="email" name="email" placeholder="EMAIL ADDRESS" required
-                                class="form-input w-full h-14 text-sm">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-primary h-14 px-8 text-xl whitespace-nowrap">
-                        GET QUOTE <i class="fas fa-fire ml-2"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Overview -->
-    <section class="py-20 bg-charcoal border-b-4 border-white/10">
+    <section class="py-20 bg-charcoal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
@@ -269,103 +245,74 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service 1 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-industry text-2xl"></i>
+                    <div class="w-14 h-14 bg-signal text-charcoal flex items-center justify-center mb-4 rounded-sm">
+                        <i class="fas fa-industry text-xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">METAL
                         FABRICATION</h3>
-                    <p class="text-offwhite/70">Custom metal work for any project. From brackets to frames, we build it
+                    <p class="text-concrete">Custom metal work for any project. From brackets to frames, we build it
                         right.</p>
                 </a>
 
                 <!-- Service 2 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-tools text-2xl"></i>
+                    <div
+                        class="w-14 h-14 bg-steel-light text-offwhite flex items-center justify-center mb-4 rounded-sm border border-white/10">
+                        <i class="fas fa-tools text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">WELDING
+                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">
+                        WELDING
                         REPAIRS</h3>
-                    <p class="text-offwhite/70">Fix broken metal parts, cracks, and structural damage with precision welding.
+                    <p class="text-concrete">Fix broken metal parts, cracks, and structural damage with precision
+                        welding.
                     </p>
                 </a>
 
                 <!-- Service 3 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-car text-2xl"></i>
+                    <div class="w-14 h-14 bg-signal text-charcoal flex items-center justify-center mb-4 rounded-sm">
+                        <i class="fas fa-car text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">EXHAUST
+                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">
+                        EXHAUST
                         WELDING</h3>
-                    <p class="text-offwhite/70">Custom exhaust work, muffler repairs, and performance modifications.</p>
+                    <p class="text-concrete">Custom exhaust work, muffler repairs, and performance modifications.</p>
                 </a>
 
                 <!-- Service 4 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-trailer text-2xl"></i>
+                    <div
+                        class="w-14 h-14 bg-steel-light text-offwhite flex items-center justify-center mb-4 rounded-sm border border-white/10">
+                        <i class="fas fa-trailer text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">TRAILERS &
+                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">
+                        TRAILERS &
                         HITCHES</h3>
-                    <p class="text-offwhite/70">Trailer repairs, hitch installation, and custom trailer fabrication.</p>
+                    <p class="text-concrete">Trailer repairs, hitch installation, and custom trailer fabrication.</p>
                 </a>
 
                 <!-- Service 5 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-grip-lines text-2xl"></i>
+                    <div class="w-14 h-14 bg-signal text-charcoal flex items-center justify-center mb-4 rounded-sm">
+                        <i class="fas fa-grip-lines text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">HAND RAILS
+                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">HAND
+                        RAILS
                         & IRON WORK</h3>
-                    <p class="text-offwhite/70">Custom railings, iron gates, and decorative metalwork for your property.</p>
+                    <p class="text-concrete">Custom railings, iron gates, and decorative metalwork for your property.
+                    </p>
                 </a>
 
                 <!-- Service 6 -->
                 <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-shield-alt text-2xl"></i>
+                    <div
+                        class="w-14 h-14 bg-steel-light text-offwhite flex items-center justify-center mb-4 rounded-sm border border-white/10">
+                        <i class="fas fa-fire-alt text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">SECURITY
-                        GATES & FENCES</h3>
-                    <p class="text-offwhite/70">Heavy-duty security gates, fencing, and property protection solutions.</p>
-                </a>
-
-                <!-- Service 7 -->
-                <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-cubes text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">CUSTOM
-                        BRACKETS & PLATES</h3>
-                    <p class="text-offwhite/70">Precision-cut brackets, mounting plates, and structural components.</p>
-                </a>
-
-                <!-- Service 8 -->
-                <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-fire-alt text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">BBQ GRILLS
+                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">BBQ
+                        GRILLS
                         & SMOKERS</h3>
-                    <p class="text-offwhite/70">Custom-built BBQ grills, smokers, and outdoor cooking equipment.</p>
-                </a>
-
-                <!-- Service 9 -->
-                <a href="services/" class="service-card p-6 group">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <i class="fas fa-hard-hat text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2 group-hover:text-signal transition-colors">
-                        REINFORCEMENTS & REPAIRS</h3>
-                    <p class="text-offwhite/70">Structural reinforcements, repairs, and load-bearing modifications.</p>
+                    <p class="text-concrete">Custom-built BBQ grills, smokers, and outdoor cooking equipment.</p>
                 </a>
             </div>
 
@@ -382,140 +329,141 @@
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="text-center mb-12">
                 <p class="text-signal font-mono font-bold tracking-widest uppercase mb-2 text-sm">The Difference</p>
-                <h2 class="text-5xl md:text-6xl font-heading text-offwhite">WHY CUSTOMERS CHOOSE<br>T & M WELDING</h2>
+                <h2 class="text-5xl md:text-6xl font-heading text-offwhite">WHY CUSTOMERS CHOOSE<br>T&M WELDING</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div class="card-brutal p-8 text-center">
-                    <div class="w-20 h-20 bg-signal text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-signal text-charcoal flex items-center justify-center mx-auto mb-6 rounded-md">
                         <span class="text-4xl font-heading">18+</span>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">YEARS EXPERIENCE</h3>
-                    <p class="text-offwhite/70 text-sm">Hands-on welding and fabrication expertise you can rely on.</p>
+                    <p class="text-concrete text-sm">Hands-on welding and fabrication expertise you can rely on.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="card-brutal p-8 text-center">
-                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-steel-light text-offwhite flex items-center justify-center mx-auto mb-6 rounded-md border border-white/10">
                         <i class="fas fa-certificate text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">CERTIFIED & LICENSED</h3>
-                    <p class="text-offwhite/70 text-sm">License #1148505. Fully compliant and professional.</p>
+                    <p class="text-concrete text-sm">License #1148505. Fully compliant and professional.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="card-brutal p-8 text-center">
-                    <div class="w-20 h-20 bg-signal text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-signal text-charcoal flex items-center justify-center mx-auto mb-6 rounded-md">
                         <i class="fas fa-dollar-sign text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">HONEST PRICING</h3>
-                    <p class="text-offwhite/70 text-sm">No upsells, no games. Fair prices for quality work.</p>
+                    <p class="text-concrete text-sm">No upsells, no games. Fair prices for quality work.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="card-brutal p-8 text-center">
-                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-6 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-steel-light text-offwhite flex items-center justify-center mx-auto mb-6 rounded-md border border-white/10">
                         <i class="fas fa-bolt text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-heading text-offwhite mb-2">FAST, RELIABLE WORK</h3>
-                    <p class="text-offwhite/70 text-sm">Quick repairs and custom jobs done right the first time.</p>
+                    <h3 class="text-2xl font-heading text-offwhite mb-2">FAST, RELIABLE</h3>
+                    <p class="text-concrete text-sm">Quick repairs and custom jobs done right the first time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="py-20 bg-charcoal border-t-4 border-b-4 border-white/10">
+    <!-- Featured Builds -->
+    <section class="py-20 bg-charcoal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
                     <p class="text-signal font-mono font-bold tracking-widest uppercase mb-2 text-sm">Our Work</p>
-                    <h2 class="text-5xl md:text-6xl font-heading text-offwhite leading-none">RECENT WELDING<br>PROJECTS</h2>
+                    <h2 class="text-5xl md:text-6xl font-heading text-offwhite leading-none">RECENT<br>BUILDS</h2>
                 </div>
                 <a href="projects/" class="btn-secondary hidden md:inline-flex">
-                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                    View All Builds <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Project 1 -->
-                <a href="projects/" class="group relative">
-                    <div class="border-4 border-white/10 shadow-solid overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
-                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                            alt="Custom BBQ Grill">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-                            <h3 class="font-heading text-xl">CUSTOM BBQ GRILL</h3>
-                        </div>
+                <!-- Build 1 -->
+                <a href="projects/" class="group relative rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                        alt="Custom BBQ Grill">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="font-heading text-xl text-offwhite group-hover:text-signal transition-colors">CUSTOM
+                            BBQ GRILL</h3>
                     </div>
                 </a>
 
-                <!-- Project 2 -->
-                <a href="projects/" class="group relative">
-                    <div class="border-4 border-white/10 shadow-solid overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
-                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                            alt="Exhaust Welding">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-                            <h3 class="font-heading text-xl">EXHAUST WELDING</h3>
-                        </div>
+                <!-- Build 2 -->
+                <a href="projects/" class="group relative rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
+                        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                        alt="Exhaust Welding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="font-heading text-xl text-offwhite group-hover:text-signal transition-colors">EXHAUST
+                            WELDING</h3>
                     </div>
                 </a>
 
-                <!-- Project 3 -->
-                <a href="projects/" class="group relative">
-                    <div class="border-4 border-white/10 shadow-solid overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558618047-f4b511d0f5c3?auto=format&fit=crop&w=600&q=80"
-                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                            alt="Iron Fence Fabrication">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-                            <h3 class="font-heading text-xl">IRON FENCE FABRICATION</h3>
-                        </div>
+                <!-- Build 3 -->
+                <a href="projects/" class="group relative rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1558618047-f4b511d0f5c3?auto=format&fit=crop&w=600&q=80"
+                        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                        alt="Iron Fence Fabrication">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="font-heading text-xl text-offwhite group-hover:text-signal transition-colors">IRON
+                            FENCE</h3>
                     </div>
                 </a>
 
-                <!-- Project 4 -->
-                <a href="projects/" class="group relative">
-                    <div class="border-4 border-white/10 shadow-solid overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80"
-                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                            alt="Hydraulic Bracket Repair">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-ink text-canvas p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-                            <h3 class="font-heading text-xl">HYDRAULIC BRACKET REPAIR</h3>
-                        </div>
+                <!-- Build 4 -->
+                <a href="projects/" class="group relative rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80"
+                        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                        alt="Hydraulic Bracket Repair">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="font-heading text-xl text-offwhite group-hover:text-signal transition-colors">BRACKET
+                            REPAIR</h3>
                     </div>
                 </a>
             </div>
 
             <div class="mt-10 text-center md:hidden">
                 <a href="projects/" class="btn-primary w-full text-xl py-4">
-                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                    View All Builds <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section class="py-20 bg-charcoal">
+    <section class="py-20 bg-steel">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Review Content -->
             <div>
                 <p class="text-signal font-mono font-bold tracking-widest uppercase mb-2 text-sm">Testimonials</p>
-                <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-8 leading-none">WHAT CUSTOMERS<br>ARE SAYING
+                <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-8 leading-none">WHAT CUSTOMERS<br>ARE
+                    SAYING
                 </h2>
 
-                <div class="bg-steel p-8 border-4 border-white/10 shadow-solid-lg relative">
-                    <div class="absolute -top-4 -left-4 bg-signal text-canvas px-4 py-2 border-3 border-white/10 flex items-center gap-2"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 relative">
+                    <div
+                        class="absolute -top-4 -left-4 bg-signal text-charcoal px-4 py-2 rounded-sm flex items-center gap-2">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -523,17 +471,17 @@
                         <i class="fas fa-star"></i>
                     </div>
 
-                    <i class="fas fa-quote-left text-offwhite/10 text-6xl absolute top-4 right-4"></i>
+                    <i class="fas fa-quote-left text-white/5 text-6xl absolute top-4 right-4"></i>
 
                     <p class="text-2xl font-heading text-offwhite mb-6 relative z-10 leading-relaxed mt-4">
                         "T and M provided above and beyond quality service… Great prices, honest, very knowledgeable. I
                         will definitely be coming back for any welding needs."
                     </p>
 
-                    <div class="flex items-center gap-4 border-t-2 border-white/10/20 pt-4">
+                    <div class="flex items-center gap-4 border-t border-white/10 pt-4">
                         <div class="font-heading text-lg text-offwhite uppercase">— Mey M., San Diego</div>
                         <div class="ml-auto">
-                            <i class="fab fa-yelp text-red-600 text-2xl"></i>
+                            <i class="fab fa-yelp text-red-500 text-2xl"></i>
                         </div>
                     </div>
                 </div>
@@ -542,79 +490,69 @@
                     <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">
                         <i class="fab fa-yelp mr-2"></i> Read Reviews on Yelp
                     </a>
-                    <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer" class="btn-outline">
-                        Leave a Review
-                    </a>
                 </div>
             </div>
 
             <!-- Image -->
             <div class="relative hidden lg:block">
-                <div class="absolute inset-0 bg-signal translate-x-4 translate-y-4"></div>
-                <div class="relative border-4 border-white/10">
+                <div class="rounded-lg overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                        alt="Welder at work">
+                        class="w-full h-[500px] object-cover" alt="Welder at work">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Area -->
-    <section class="py-16 bg-steel border-t-4 border-b-4 border-white/10">
+    <section class="py-16 bg-charcoal border-t border-b border-white/5">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 text-center">
             <h2 class="text-4xl font-heading text-offwhite mb-4">SERVING SAN DIEGO & SURROUNDING AREAS</h2>
-            <p class="text-lg text-offwhite/70 max-w-2xl mx-auto">
+            <p class="text-lg text-concrete max-w-2xl mx-auto">
                 Proudly serving San Diego, Imperial County, and Orange County. Mobile welding available for larger jobs.
             </p>
         </div>
     </section>
 
     <!-- Strong CTA Section -->
-    <section class="py-24 bg-ink relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
+    <section class="py-24 bg-steel relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
             <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_center,#FF5500_1px,transparent_1px)] [background-size:32px_32px]">
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,#FF6A00_1px,transparent_1px)] [background-size:32px_32px]">
             </div>
         </div>
 
         <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
-            <h2 class="text-5xl md:text-7xl font-heading text-canvas mb-6 leading-none">
+            <h2 class="text-5xl md:text-7xl font-heading text-offwhite mb-6 leading-none">
                 NEED WELDING<br><span class="text-signal">DONE RIGHT?</span>
             </h2>
-            <p class="text-xl text-canvas/80 mb-10 max-w-2xl mx-auto">
+            <p class="text-xl text-concrete mb-10 max-w-2xl mx-auto">
                 From quick repairs to full custom fabrication — call today for honest pricing and quality work.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5 bg-signal text-canvas border-canvas">
+                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5">
                     <i class="fas fa-phone-alt"></i> Call Now
                 </a>
-                <a href="contact/"
-                    class="btn-secondary text-2xl px-10 py-5 text-canvas border-canvas hover:bg-charcoal hover:text-offwhite">
-                    Get a Quote
+                <a href="contact/" class="btn-secondary text-2xl px-10 py-5">
+                    Get It Done
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ink text-canvas py-16 border-t-8 border-signal">
+    <footer class="bg-charcoal text-offwhite py-16 border-t-2 border-signal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <!-- Brand -->
             <div>
-                <a href="./" class="flex items-center gap-3 mb-6 group">
-                    <div class="bg-signal text-canvas p-2 border-3 border-canvas" style="border: 3px solid #fff;">
-                        <i class="fas fa-fire text-2xl"></i>
-                    </div>
-                    <span class="text-3xl font-heading text-canvas group-hover:text-signal transition-colors">T & M
-                        WELDING</span>
+                <a href="./" class="flex items-center mb-6 group">
+                    <img src="logo.jpg" alt="T&M Welding" class="h-12 w-auto">
                 </a>
-                <p class="text-canvas/60 mb-4">
+                <p class="text-concrete mb-4">
                     Certified Welder · License #1148505<br>
                     18+ Years Experience
                 </p>
-                <p class="text-canvas/60 text-sm">
+                <p class="text-concrete text-sm">
                     Custom welding and metal fabrication serving San Diego.
                 </p>
             </div>
@@ -622,7 +560,7 @@
             <!-- Services -->
             <div>
                 <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">SERVICES</h4>
-                <ul class="space-y-3 text-canvas/70">
+                <ul class="space-y-3 text-concrete">
                     <li><a href="services/" class="hover:text-signal transition-colors">Metal Fabrication</a></li>
                     <li><a href="services/" class="hover:text-signal transition-colors">Welding Repairs</a></li>
                     <li><a href="services/" class="hover:text-signal transition-colors">Exhaust Welding</a></li>
@@ -634,18 +572,18 @@
             <!-- Company -->
             <div>
                 <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">COMPANY</h4>
-                <ul class="space-y-3 text-canvas/70">
+                <ul class="space-y-3 text-concrete">
                     <li><a href="services/" class="hover:text-signal transition-colors">Services</a></li>
-                    <li><a href="projects/" class="hover:text-signal transition-colors">Projects</a></li>
+                    <li><a href="projects/" class="hover:text-signal transition-colors">Builds</a></li>
                     <li><a href="about/" class="hover:text-signal transition-colors">About</a></li>
-                    <li><a href="contact/" class="hover:text-signal transition-colors">Contact</a></li>
+                    <li><a href="contact/" class="hover:text-signal transition-colors">Get It Done</a></li>
                 </ul>
             </div>
 
             <!-- Contact -->
             <div>
                 <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">CONTACT</h4>
-                <ul class="space-y-4 text-canvas/70">
+                <ul class="space-y-4 text-concrete">
                     <li class="flex items-start gap-3">
                         <i class="fas fa-map-marker-alt text-signal mt-1"></i>
                         <span>San Diego, CA 92114</span>
@@ -653,7 +591,7 @@
                     <li class="flex items-center gap-3">
                         <i class="fas fa-phone-alt text-signal"></i>
                         <a href="tel:6194057892"
-                            class="hover:text-signal transition-colors font-heading text-lg text-canvas">(619)
+                            class="hover:text-signal transition-colors font-heading text-lg text-offwhite">(619)
                             405-7892</a>
                     </li>
                     <li class="flex items-center gap-3">
@@ -664,11 +602,11 @@
 
                 <div class="flex gap-4 mt-6">
                     <a href="https://www.yelp.com" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 bg-charcoal/10 border-2 border-canvas/30 flex items-center justify-center hover:bg-signal hover:border-signal transition-colors">
+                        class="w-10 h-10 bg-steel rounded-sm flex items-center justify-center hover:bg-signal hover:text-charcoal transition-colors border border-white/10">
                         <i class="fab fa-yelp"></i>
                     </a>
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 bg-charcoal/10 border-2 border-canvas/30 flex items-center justify-center hover:bg-signal hover:border-signal transition-colors">
+                        class="w-10 h-10 bg-steel rounded-sm flex items-center justify-center hover:bg-signal hover:text-charcoal transition-colors border border-white/10">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -676,66 +614,47 @@
         </div>
 
         <div
-            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-canvas/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-canvas/30 text-sm font-mono">© 2026 T & M Welding. All rights reserved.</p>
-            <p class="text-canvas/30 text-sm font-mono">License #1148505</p>
+            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-concrete text-sm font-mono">© 2026 T&M Welding. All rights reserved.</p>
+            <p class="text-concrete text-sm font-mono">License #1148505</p>
         </div>
     </footer>
 
     <!-- Modal -->
     <div id="modal-overlay"
-        class="fixed inset-0 z-[60] hidden bg-ink/90 backdrop-blur-sm flex items-center justify-center p-4">
-        <div
-            class="modal-container bg-charcoal border-4 border-white/10 w-full max-w-lg shadow-solid-lg relative overflow-hidden">
+        class="fixed inset-0 z-[60] hidden bg-charcoal/95 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="modal-container w-full max-w-lg relative overflow-hidden p-8">
             <button data-close="modal"
-                class="absolute top-4 right-4 text-offwhite hover:text-signal transition-colors border-3 border-white/10 p-1 hover:bg-signal hover:text-canvas z-10 w-10 h-10 flex items-center justify-center"
-                style="border: 3px solid #000;">
+                class="absolute top-4 right-4 text-offwhite hover:text-signal transition-colors rounded-sm p-2 hover:bg-steel z-10 w-10 h-10 flex items-center justify-center">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <div class="p-8">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 bg-signal text-canvas text-xs font-bold uppercase tracking-wider mb-4 border-2 border-white/10">
-                    <i class="fas fa-fire"></i> Free Quote
-                </div>
-                <h3 class="text-4xl font-heading text-offwhite mb-2">GET YOUR QUOTE</h3>
-                <p class="text-offwhite/70 text-sm mb-6">Fast, accurate, and honest pricing. No obligation.</p>
-                <form class="space-y-4" action="#" method="POST">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="relative">
-                            <label
-                                class="absolute -top-2 left-2 bg-charcoal px-1 text-[10px] font-bold text-offwhite uppercase border border-white/10">Name</label>
-                            <input type="text" name="name" required class="form-input pt-3">
-                        </div>
-                        <div class="relative">
-                            <label
-                                class="absolute -top-2 left-2 bg-charcoal px-1 text-[10px] font-bold text-offwhite uppercase border border-white/10">Phone</label>
-                            <input type="tel" name="phone" required class="form-input pt-3">
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label
-                            class="absolute -top-2 left-2 bg-charcoal px-1 text-[10px] font-bold text-offwhite uppercase border border-white/10">Email</label>
-                        <input type="email" name="email" required class="form-input pt-3">
-                    </div>
-                    <div class="relative">
-                        <select name="service" class="form-input">
-                            <option value="" disabled selected>SERVICE NEEDED?</option>
-                            <option value="Metal Fabrication">Metal Fabrication</option>
-                            <option value="Welding Repairs">Welding Repairs</option>
-                            <option value="Exhaust Welding">Exhaust Welding</option>
-                            <option value="Trailers & Hitches">Trailers & Hitches</option>
-                            <option value="BBQ Grills">BBQ Grills & Smokers</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <textarea name="message" placeholder="DESCRIBE YOUR PROJECT..." rows="3"
-                        class="form-input"></textarea>
-                    <button type="submit" class="btn-primary w-full text-xl py-4">
-                        Submit Request <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                    <p class="text-center text-xs text-offwhite/40 font-mono">Your information is secure.</p>
-                </form>
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 bg-signal text-charcoal text-xs font-bold uppercase tracking-wider mb-4 rounded-sm">
+                <i class="fas fa-fire"></i> Free Quote
             </div>
+            <h3 class="text-4xl font-heading text-offwhite mb-2">GET YOUR QUOTE</h3>
+            <p class="text-concrete text-sm mb-6">Fast, accurate, and honest pricing. No obligation.</p>
+            <form class="space-y-4" action="#" method="POST">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="NAME" required class="form-input">
+                    <input type="tel" name="phone" placeholder="PHONE" required class="form-input">
+                </div>
+                <input type="email" name="email" placeholder="EMAIL" required class="form-input">
+                <select name="service" class="form-input">
+                    <option value="" disabled selected>SERVICE NEEDED?</option>
+                    <option value="Metal Fabrication">Metal Fabrication</option>
+                    <option value="Welding Repairs">Welding Repairs</option>
+                    <option value="Exhaust Welding">Exhaust Welding</option>
+                    <option value="Trailers & Hitches">Trailers & Hitches</option>
+                    <option value="BBQ Grills">BBQ Grills & Smokers</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea name="message" placeholder="DESCRIBE YOUR PROJECT..." rows="3" class="form-input"></textarea>
+                <button type="submit" class="btn-primary w-full text-xl py-4">
+                    Submit Request <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <p class="text-center text-xs text-concrete">Your information is secure.</p>
+            </form>
         </div>
     </div>
 

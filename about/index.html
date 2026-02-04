@@ -4,43 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About T & M Welding | Certified Welder San Diego</title>
+    <title>About T&M Welding | Certified Welder San Diego</title>
     <meta name="description"
-        content="Meet Thai, certified welder with 18+ years experience. Honest prices, quality craftsmanship, and dedication to every job. San Diego's trusted welder.">
-    <meta name="keywords"
-        content="About T & M Welding, Certified Welder San Diego, Thai Welder, Metal Fabrication Experience">
+        content="Meet Thai, certified welder with 18+ years experience. Honest prices, quality craftsmanship. San Diego's trusted welder.">
     <link rel="canonical" href="https://tmwelding.com/about/">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="About T & M Welding">
-    <meta property="og:description"
-        content="Meet Thai, certified welder with 18+ years of experience serving San Diego.">
-    <meta property="og:url" content="https://tmwelding.com/about/">
-    <meta property="og:type" content="website">
-
-    <!-- Design System -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        charcoal: '#0E0E0F',
-                        steel: '#1E1F23',
-                        concrete: '#8A8F98',
-                        signal: '#FF6A00',
-                        offwhite: '#F5F6F7',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'Bebas Neue', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'Roboto Mono', 'monospace'],
-                    },
-                    boxShadow: {
-                        'edge': '0 2px 8px rgba(0, 0, 0, 0.2)',
-                        'cut': '0 4px 16px rgba(0, 0, 0, 0.15)',
-                        'strike': '0 0 30px rgba(255, 85, 0, 0.4)',
-                    }
+                    colors: { charcoal: '#0E0E0F', steel: '#1E1F23', 'steel-light': '#2A2B30', concrete: '#8A8F98', signal: '#FF6A00', offwhite: '#F5F6F7' },
+                    fontFamily: { sans: ['Inter', 'system-ui'], heading: ['Bebas Neue', 'Impact'], mono: ['JetBrains Mono', 'monospace'] },
+                    borderRadius: { sm: '8px', md: '10px', lg: '12px', xl: '16px' }
                 }
             }
         }
@@ -53,368 +28,208 @@
 </head>
 
 <body class="bg-charcoal text-offwhite">
-
-    <!-- Top Utility Strip -->
-    <div class="bg-ink text-canvas py-2 text-center">
+    <!-- Top Strip -->
+    <div class="bg-steel text-offwhite py-2 text-center border-b border-white/5">
         <div
             class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-mono">
-            <span class="flex items-center gap-2">
-                <i class="fas fa-star text-signal"></i>
-                <span class="font-bold">5.0 on Yelp</span>
-            </span>
-            <span class="hidden sm:flex items-center gap-2">
-                <i class="fas fa-clock text-signal"></i>
-                <span>Open 6:00 AM – 7:00 PM</span>
-            </span>
-            <span class="flex items-center gap-2">
-                <i class="fas fa-map-marker-alt text-signal"></i>
-                <span>San Diego, CA</span>
-            </span>
+            <span class="flex items-center gap-2"><i class="fas fa-star text-signal"></i><span class="font-bold">5.0 on
+                    Yelp</span></span>
+            <span class="hidden sm:flex items-center gap-2"><i class="fas fa-clock text-signal"></i><span>Open 6:00 AM –
+                    7:00 PM</span></span>
+            <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-signal"></i><span>San Diego,
+                    CA</span></span>
         </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="bg-charcoal border-b-3 border-white/10 sticky top-0 z-50" style="border-bottom: 3px solid #000;">
+    <nav class="bg-charcoal sticky top-0 z-50 border-b border-white/5">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Brand -->
-                <a href="../" class="flex items-center gap-3 group">
-                    <div class="bg-signal text-canvas p-2 border-3 border-white/10" style="border: 3px solid #000;">
-                        <i class="fas fa-fire text-2xl"></i>
-                    </div>
-                    <div class="flex flex-col leading-none">
-                        <span
-                            class="text-3xl md:text-4xl font-heading text-offwhite group-hover:text-signal transition-colors tracking-wide">T
-                            & M WELDING</span>
-                    </div>
+                <a href="../" class="flex items-center group">
+                    <img src="../logo.jpg" alt="T&M Welding" class="h-12 md:h-14 w-auto">
                 </a>
-
-                <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="../"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">HOME</a>
-                    <a href="../services/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">CAPABILITIES</a>
-                    <a href="../projects/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">BUILDS</a>
-                    <a href="./" class="font-heading text-xl text-signal border-b-3 border-signal tracking-wide"
-                        style="border-bottom: 3px solid #FF5500;">THE OPERATOR</a>
-                    <a href="../contact/"
-                        class="font-heading text-xl text-offwhite hover:text-signal transition-colors tracking-wide">GET IT DONE</a>
-
-                    <div class="flex items-center gap-3 ml-4">
-                        <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3">
-                            <i class="fas fa-phone-alt"></i> STRIKE A CALL
-                        </a>
-                    </div>
+                    <a href="../" class="nav-link">HOME</a>
+                    <a href="../services/" class="nav-link">SERVICES</a>
+                    <a href="../projects/" class="nav-link">BUILDS</a>
+                    <a href="./" class="nav-link text-signal">ABOUT</a>
+                    <a href="../contact/" class="nav-link">GET IT DONE</a>
+                    <a href="tel:6194057892" class="btn-primary text-lg px-6 py-3 ml-4"><i class="fas fa-phone-alt"></i>
+                        CALL NOW</a>
                 </div>
-
-                <!-- Mobile Trigger -->
-                <button id="mobile-menu-btn"
-                    class="lg:hidden text-offwhite p-2 border-3 border-white/10 hover:bg-signal hover:text-canvas transition-colors"
-                    style="border: 3px solid #000;">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <button id="mobile-menu-btn" class="lg:hidden text-offwhite p-2 rounded-sm border border-white/10"><i
+                        class="fas fa-bars text-2xl"></i></button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu-wrapper lg:hidden flex flex-col pt-10 px-6 space-y-6">
-        <a href="../"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">HOME</a>
-        <a href="../services/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">CAPABILITIES</a>
-        <a href="../projects/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">BUILDS</a>
-        <a href="./" class="text-2xl font-heading text-signal tracking-wide">THE OPERATOR</a>
-        <a href="../contact/"
-            class="text-2xl font-heading text-canvas tracking-wide hover:text-signal transition-colors">GET IT DONE</a>
-        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4">
-            <i class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892
-        </a>
+        <a href="../" class="text-2xl font-heading text-offwhite">HOME</a>
+        <a href="../services/" class="text-2xl font-heading text-offwhite">SERVICES</a>
+        <a href="../projects/" class="text-2xl font-heading text-offwhite">BUILDS</a>
+        <a href="./" class="text-2xl font-heading text-signal">ABOUT</a>
+        <a href="../contact/" class="text-2xl font-heading text-offwhite">GET IT DONE</a>
+        <a href="tel:6194057892" class="btn-primary w-full text-center mt-8 text-xl py-4"><i
+                class="fas fa-phone-alt mr-2"></i> CALL (619) 405-7892</a>
     </div>
 
     <!-- Hero -->
-    <header class="relative bg-ink pt-32 pb-20 lg:pb-32 overflow-hidden border-b-4 border-signal">
+    <header class="relative min-h-[50vh] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80"
-                class="w-full h-full object-cover opacity-30 grayscale" alt="Welding background">
-            <div class="absolute inset-0 bg-ink/50"></div>
+                class="w-full h-full object-cover" alt="Welding background">
+            <div class="hero-overlay absolute inset-0"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
-            <div class="inline-block bg-signal px-4 py-2 text-canvas font-mono font-bold uppercase text-sm mb-6 border-3 border-canvas"
-                style="border: 3px solid #fff;">
-                <i class="fas fa-user-hard-hat mr-2"></i> 18+ Years Experience
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-steel/80 backdrop-blur-sm rounded-sm border border-white/10 text-sm font-mono mb-6">
+                <i class="fas fa-user text-signal"></i><span class="text-offwhite">18+ Years Experience</span>
             </div>
-            <h1 class="text-5xl lg:text-8xl font-heading text-canvas mb-6 leading-none">MEET THE WELDER<br><span
+            <h1 class="text-5xl md:text-7xl font-heading text-offwhite mb-6">MEET THE WELDER<br><span
                     class="text-signal">BEHIND THE WORK</span></h1>
-            <p class="text-xl text-canvas/80 max-w-2xl mx-auto">
-                Quality craftsmanship, honest prices, and a dedication to getting the job done right. That's what T & M
-                Welding is all about.
-            </p>
+            <p class="text-xl text-offwhite/80 max-w-2xl mx-auto">Quality craftsmanship, honest prices, and dedication
+                to getting the job done right.</p>
         </div>
     </header>
 
     <!-- About Content -->
     <section class="py-20 bg-charcoal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            <!-- Image -->
             <div class="relative">
-                <div class="absolute inset-0 bg-signal translate-x-4 translate-y-4 hidden lg:block"></div>
-                <div class="relative border-4 border-white/10 shadow-solid-lg">
+                <div class="rounded-xl overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
-                        class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                        alt="Thai - T & M Welding">
+                        class="w-full h-[500px] object-cover" alt="Thai - T&M Welding">
                 </div>
-
-                <!-- Experience Badge -->
                 <div
-                    class="absolute -bottom-6 -right-6 bg-ink text-canvas border-4 border-signal p-6 shadow-solid hidden md:block">
-                    <div class="text-6xl font-heading leading-none text-signal">18+</div>
+                    class="absolute -bottom-6 -right-6 bg-signal text-charcoal p-6 rounded-lg shadow-lg hidden md:block">
+                    <div class="text-6xl font-heading leading-none">18+</div>
                     <div class="text-sm font-mono uppercase font-bold">Years Welding</div>
                 </div>
             </div>
-
-            <!-- Content -->
             <div>
                 <p class="text-signal font-mono font-bold tracking-widest uppercase mb-2 text-sm">The Story</p>
-                <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-8 leading-none">BUILT ON SKILL,<br>TRUST & HARD
-                    WORK</h2>
-
-                <div class="space-y-6 text-lg text-offwhite/80 leading-relaxed">
-                    <p>
-                        I'm Thai, the welder behind T & M Welding. For over 18 years, I've been doing metal work and
-                        welding for customers across San Diego. What started as a skill I learned young has turned into
-                        a full-time business built on word of mouth and repeat customers.
+                <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-8 leading-none">BUILT ON SKILL,<br>TRUST &
+                    HARD WORK</h2>
+                <div class="space-y-6 text-lg text-concrete leading-relaxed">
+                    <p>I'm Thai, the welder behind T&M Welding. For over 18 years, I've been doing metal work for
+                        customers across San Diego.</p>
+                    <p>I specialize in MIG welding using Argon and CO₂ for clean, strong welds on all kinds of projects.
                     </p>
-                    <p>
-                        I specialize in MIG welding using Argon and CO₂ for clean, strong welds on all kinds of projects
-                        — from exhaust repairs and trailer fixes to custom BBQ grills and security gates. If it's metal
-                        and it needs welding, I can handle it.
-                    </p>
-                    <p class="border-l-4 border-signal pl-6 text-offwhite font-medium italic">
-                        "I believe in doing the job right the first time, charging a fair price, and treating every
-                        customer the way I'd want to be treated. No games, no upsells — just honest work."
-                    </p>
-                    <p>
-                        T & M Welding is a small, local business. That means when you call, you talk to me. When I give
-                        you a quote, that's the price. And when I finish the job, you'll see the quality for yourself.
-                    </p>
+                    <p class="border-l-4 border-signal pl-6 text-offwhite font-medium italic">"I believe in doing the
+                        job right the first time, charging a fair price, and treating every customer the way I'd want to
+                        be treated."</p>
                 </div>
-
                 <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="tel:6194057892" class="btn-primary">
-                        <i class="fas fa-phone-alt mr-2"></i> Call (619) 405-7892
-                    </a>
-                    <a href="../contact/" class="btn-secondary">
-                        Get a Quote
-                    </a>
+                    <a href="tel:6194057892" class="btn-primary"><i class="fas fa-phone-alt mr-2"></i> Call (619)
+                        405-7892</a>
+                    <a href="../contact/" class="btn-secondary">Get a Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Highlights / Stats -->
-    <section class="py-20 bg-steel border-t-4 border-b-4 border-white/10">
+    <!-- Stats -->
+    <section class="py-20 bg-steel">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-heading text-offwhite">WHY CUSTOMERS TRUST T & M</h2>
-            </div>
-
+            <h2 class="text-5xl font-heading text-offwhite text-center mb-12">WHY CUSTOMERS TRUST T&M</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Stat 1 -->
-                <div
-                    class="bg-charcoal border-4 border-white/10 shadow-solid p-8 text-center group hover:-translate-y-1 transition-transform">
-                    <div class="w-20 h-20 bg-signal text-canvas flex items-center justify-center mx-auto mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-signal text-charcoal flex items-center justify-center mx-auto mb-4 rounded-md">
                         <i class="fas fa-certificate text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">CERTIFIED WELDER</h3>
-                    <p class="text-offwhite/60 text-sm font-mono">License #1148505</p>
+                    <p class="text-concrete text-sm font-mono">License #1148505</p>
                 </div>
-
-                <!-- Stat 2 -->
-                <div
-                    class="bg-charcoal border-4 border-white/10 shadow-solid p-8 text-center group hover:-translate-y-1 transition-transform">
-                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-steel-light text-offwhite flex items-center justify-center mx-auto mb-4 rounded-md border border-white/10">
                         <span class="text-3xl font-heading">18+</span>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">YEARS EXPERIENCE</h3>
-                    <p class="text-offwhite/60 text-sm font-mono">Since 2007</p>
+                    <p class="text-concrete text-sm font-mono">Since 2007</p>
                 </div>
-
-                <!-- Stat 3 -->
-                <div
-                    class="bg-charcoal border-4 border-white/10 shadow-solid p-8 text-center group hover:-translate-y-1 transition-transform">
-                    <div class="w-20 h-20 bg-signal text-canvas flex items-center justify-center mx-auto mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-signal text-charcoal flex items-center justify-center mx-auto mb-4 rounded-md">
                         <i class="fas fa-fire text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">MIG WELDING</h3>
-                    <p class="text-offwhite/60 text-sm font-mono">Argon & CO₂</p>
+                    <p class="text-concrete text-sm font-mono">Argon & CO₂</p>
                 </div>
-
-                <!-- Stat 4 -->
-                <div
-                    class="bg-charcoal border-4 border-white/10 shadow-solid p-8 text-center group hover:-translate-y-1 transition-transform">
-                    <div class="w-20 h-20 bg-ink text-canvas flex items-center justify-center mx-auto mb-4 border-3 border-white/10"
-                        style="border: 3px solid #000;">
+                <div class="card-steel p-8 text-center">
+                    <div
+                        class="w-20 h-20 bg-steel-light text-offwhite flex items-center justify-center mx-auto mb-4 rounded-md border border-white/10">
                         <i class="fas fa-dollar-sign text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-heading text-offwhite mb-2">AFFORDABLE</h3>
-                    <p class="text-offwhite/60 text-sm font-mono">Honest Pricing</p>
+                    <p class="text-concrete text-sm font-mono">Honest Pricing</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="py-20 bg-charcoal">
-        <div class="max-w-5xl mx-auto px-4 md:px-8">
-            <div class="text-center mb-12">
-                <p class="text-signal font-mono font-bold tracking-widest uppercase mb-2 text-sm">The T & M Way</p>
-                <h2 class="text-5xl font-heading text-offwhite">HOW I WORK</h2>
-            </div>
-
-            <div class="space-y-8">
-                <!-- Value 1 -->
-                <div class="flex gap-6 items-start bg-steel p-6 border-4 border-white/10 shadow-solid">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center flex-shrink-0 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <span class="text-3xl font-heading">1</span>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-heading text-offwhite mb-2">YOU CALL, I ANSWER</h3>
-                        <p class="text-offwhite/70">No call center, no runaround. When you call T & M Welding, you talk to me
-                            directly. I'll listen to what you need and give you an honest assessment.</p>
-                    </div>
-                </div>
-
-                <!-- Value 2 -->
-                <div class="flex gap-6 items-start bg-steel p-6 border-4 border-white/10 shadow-solid">
-                    <div class="w-16 h-16 bg-ink text-canvas flex items-center justify-center flex-shrink-0 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <span class="text-3xl font-heading">2</span>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-heading text-offwhite mb-2">FAIR QUOTE, NO GAMES</h3>
-                        <p class="text-offwhite/70">I'll give you a straight price based on the work. No hidden fees, no
-                            "surprises" at the end. The quote I give you is what you pay.</p>
-                    </div>
-                </div>
-
-                <!-- Value 3 -->
-                <div class="flex gap-6 items-start bg-steel p-6 border-4 border-white/10 shadow-solid">
-                    <div class="w-16 h-16 bg-signal text-canvas flex items-center justify-center flex-shrink-0 border-3 border-white/10"
-                        style="border: 3px solid #000;">
-                        <span class="text-3xl font-heading">3</span>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-heading text-offwhite mb-2">QUALITY WORK, EVERY TIME</h3>
-                        <p class="text-offwhite/70">I take pride in my welds. Clean, strong, and built to last. When the
-                            job's done, you'll see the difference quality makes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-ink">
-        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
-            <h2 class="text-5xl md:text-6xl font-heading text-canvas mb-6">
-                READY TO GET<br><span class="text-signal">STARTED?</span>
-            </h2>
-            <p class="text-xl text-canvas/80 mb-10 max-w-2xl mx-auto">
-                Whether you have a quick repair or a full custom project, I'm here to help. Give me a call.
-            </p>
+    <!-- CTA -->
+    <section class="py-24 bg-charcoal border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-5xl md:text-6xl font-heading text-offwhite mb-6">READY TO GET<br><span
+                    class="text-signal">STARTED?</span></h2>
+            <p class="text-xl text-concrete mb-10 max-w-2xl mx-auto">Whether you have a quick repair or a custom
+                project, I'm here to help.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5 bg-signal text-canvas border-canvas">
-                    <i class="fas fa-phone-alt"></i> Call (619) 405-7892
-                </a>
-                <a href="../contact/"
-                    class="btn-secondary text-2xl px-10 py-5 text-canvas border-canvas hover:bg-charcoal hover:text-offwhite">
-                    Get a Quote
-                </a>
+                <a href="tel:6194057892" class="btn-primary text-2xl px-10 py-5"><i class="fas fa-phone-alt"></i> Call
+                    (619) 405-7892</a>
+                <a href="../contact/" class="btn-secondary text-2xl px-10 py-5">Get a Quote</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ink text-canvas py-16 border-t-8 border-signal">
+    <footer class="bg-charcoal text-offwhite py-16 border-t-2 border-signal">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
-            <!-- Brand -->
-            <div>
-                <a href="../" class="flex items-center gap-3 mb-6 group">
-                    <div class="bg-signal text-canvas p-2 border-3 border-canvas" style="border: 3px solid #fff;">
-                        <i class="fas fa-fire text-2xl"></i>
-                    </div>
-                    <span class="text-3xl font-heading text-canvas group-hover:text-signal transition-colors">T & M
-                        WELDING</span>
+            <div><a href="../" class="flex items-center mb-6 group">
+                    <img src="../logo.jpg" alt="T&M Welding" class="h-12 w-auto">
                 </a>
-                <p class="text-canvas/60 mb-4">
-                    Certified Welder · License #1148505<br>
-                    18+ Years Experience
-                </p>
+                <p class="text-concrete">Certified Welder · License #1148505<br>18+ Years Experience</p>
             </div>
-
-            <!-- Services -->
             <div>
-                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">CAPABILITIES</h4>
-                <ul class="space-y-3 text-canvas/70">
-                    <li><a href="../services/" class="hover:text-signal transition-colors">Metal Fabrication</a></li>
-                    <li><a href="../services/" class="hover:text-signal transition-colors">Exhaust Welding</a></li>
-                    <li><a href="../services/" class="hover:text-signal transition-colors">Trailers & Hitches</a></li>
-                    <li><a href="../services/" class="hover:text-signal transition-colors">BBQ Grills & Smokers</a></li>
+                <h4 class="font-heading text-xl text-signal mb-6">SERVICES</h4>
+                <ul class="space-y-3 text-concrete">
+                    <li><a href="../services/" class="hover:text-signal">Metal Fabrication</a></li>
+                    <li><a href="../services/" class="hover:text-signal">Exhaust Welding</a></li>
+                    <li><a href="../services/" class="hover:text-signal">Trailers & Hitches</a></li>
                 </ul>
             </div>
-
-            <!-- Company -->
             <div>
-                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">COMPANY</h4>
-                <ul class="space-y-3 text-canvas/70">
-                    <li><a href="../services/" class="hover:text-signal transition-colors">Services</a></li>
-                    <li><a href="../projects/" class="hover:text-signal transition-colors">Projects</a></li>
-                    <li><a href="./" class="hover:text-signal transition-colors">About</a></li>
-                    <li><a href="../contact/" class="hover:text-signal transition-colors">Contact</a></li>
+                <h4 class="font-heading text-xl text-signal mb-6">COMPANY</h4>
+                <ul class="space-y-3 text-concrete">
+                    <li><a href="../services/" class="hover:text-signal">Services</a></li>
+                    <li><a href="../projects/" class="hover:text-signal">Builds</a></li>
+                    <li><a href="./" class="hover:text-signal">About</a></li>
+                    <li><a href="../contact/" class="hover:text-signal">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Contact -->
             <div>
-                <h4 class="font-heading text-xl text-signal mb-6 tracking-wide">GET IT DONE</h4>
-                <ul class="space-y-4 text-canvas/70">
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt text-signal mt-1"></i>
-                        <span>San Diego, CA 92114</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-signal"></i>
-                        <a href="tel:6194057892"
-                            class="hover:text-signal transition-colors font-heading text-lg text-canvas">(619)
-                            405-7892</a>
-                    </li>
+                <h4 class="font-heading text-xl text-signal mb-6">CONTACT</h4>
+                <ul class="space-y-4 text-concrete">
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-signal mt-1"></i><span>San
+                            Diego, CA 92114</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-signal"></i><a
+                            href="tel:6194057892" class="hover:text-signal font-heading text-lg text-offwhite">(619)
+                            405-7892</a></li>
                 </ul>
             </div>
         </div>
-
         <div
-            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-canvas/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-canvas/30 text-sm font-mono">© 2026 T & M Welding. All rights reserved.</p>
-            <p class="text-canvas/30 text-sm font-mono">License #1148505</p>
+            class="max-w-[1400px] mx-auto px-4 md:px-8 border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-concrete text-sm font-mono">© 2026 T&M Welding. All rights reserved.</p>
+            <p class="text-concrete text-sm font-mono">License #1148505</p>
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA -->
-    <div id="mobile-sticky-cta" class="mobile-sticky-cta md:hidden">
-        <a href="tel:6194057892" class="btn-primary w-full text-center text-xl py-4">
-            <i class="fas fa-phone-alt mr-2"></i> Call (619) 405-7892
-        </a>
-    </div>
-
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta md:hidden"><a href="tel:6194057892"
+            class="btn-primary w-full text-center text-xl py-4"><i class="fas fa-phone-alt mr-2"></i> Call (619)
+            405-7892</a></div>
     <script src="../js/script.js"></script>
 </body>
 

@@ -1,493 +1,580 @@
 /* 
- * T & M Welding - PRECISIONSTRIKE Design System
- * Style: Industrial · Fast · Controlled · Edgy · Modern
- * Dark steel-forward interface with controlled orange accents
+ * T & M Welding — PRECISIONSTRIKE Design System
+ * Industrial · Fast · Controlled · Edgy · Modern
+ * Keywords: Precision, Edge, Motion, Impact, Control, Craft, Power
  */
 
-/* --- Variables & Tokens --- */
+/* ========================================
+   DESIGN TOKENS
+   ======================================== */
 :root {
-  /* PrecisionStrike Palette */
-  --charcoal: #0E0E0F;
-  --steel: #1E1F23;
-  --concrete: #8A8F98;
-  --signal: #FF6A00;
-  --signal-hover: #FF7D1A;
-  --offwhite: #F5F6F7;
-  --electric-red: #E53935;
+    /* Primary Palette */
+    --charcoal: #0E0E0F;
+    --steel: #1E1F23;
+    --steel-light: #2A2B30;
+    --concrete: #8A8F98;
+    --signal: #FF6A00;
+    --signal-hot: #FF7A1A;
+    --offwhite: #F5F6F7;
+    --pure-white: #FFFFFF;
 
-  /* Surface Colors */
-  --surface-dark: var(--charcoal);
-  --surface-card: var(--steel);
-  --surface-light: var(--offwhite);
+    /* Micro-accents */
+    --electric-red: #E53935;
 
-  /* Typography */
-  --font-display: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+    /* Transparency layers */
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-glow: rgba(255, 106, 0, 0.15);
 
-  /* Controlled Rounding */
-  --radius-button: 8px;
-  --radius-card: 12px;
-  --radius-image: 16px;
+    /* Typography */
+    --font-heading: 'Bebas Neue', 'Impact', sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
 
-  /* Shadows */
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-float: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --glow-signal: 0 0 20px rgba(255, 106, 0, 0.3);
+    /* Controlled Rounding */
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
 
-  /* Transitions - Punchy */
-  --speed-snap: 0.12s;
-  --speed-quick: 0.18s;
-  --speed-smooth: 0.25s;
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px var(--glass-glow);
+
+    /* Transitions — SNAP (fast, punchy) */
+    --speed-snap: 0.12s;
+    --speed-smooth: 0.2s;
 }
 
-/* --- Global Base --- */
+/* ========================================
+   BASE STYLES
+   ======================================== */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--charcoal);
-  color: var(--offwhite);
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
+    font-family: var(--font-body);
+    background-color: var(--charcoal);
+    color: var(--offwhite);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
 }
 
-/* --- Typography --- */
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  line-height: 1.05;
-  text-transform: uppercase;
-  color: var(--offwhite);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.0;
+    text-transform: uppercase;
 }
 
-p {
-  color: var(--concrete);
+/* ========================================
+   BUTTONS — PrecisionStrike CTAs
+   ======================================== */
+.btn-primary {
+    background: var(--signal);
+    color: var(--charcoal);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    transition: all var(--speed-snap) ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-/* --- Animations --- */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+.btn-primary:hover {
+    background: var(--signal-hot);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
-  to {
-    opacity: 1;
+.btn-primary:active {
     transform: translateY(0);
-  }
+    box-shadow: var(--shadow-sm);
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
+.btn-secondary {
+    background: transparent;
+    color: var(--offwhite);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    padding: 0.875rem 1.75rem;
+    border: 2px solid var(--signal);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    transition: all var(--speed-snap) ease;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-  to {
+.btn-secondary:hover {
+    background: var(--signal);
+    color: var(--charcoal);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--offwhite);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--concrete);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all var(--speed-snap) ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    border-color: var(--signal);
+    color: var(--signal);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CARDS — Dark Steel with Glow
+   ======================================== */
+.card-steel {
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: all var(--speed-snap) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-steel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--signal);
+    transition: height var(--speed-smooth) ease;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.card-steel:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+    border-color: rgba(255, 106, 0, 0.2);
+}
+
+.card-steel:hover::before {
+    height: 100%;
+}
+
+/* Service cards variant */
+.service-card {
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--speed-snap) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--signal);
+    transition: width var(--speed-smooth) ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.service-card:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   FORMS — Technical Precision
+   ======================================== */
+.form-input {
+    width: 100%;
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--offwhite);
+    padding: 0.875rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    transition: all var(--speed-snap) ease;
+}
+
+.form-input::placeholder {
+    color: var(--concrete);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8125rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--signal);
+    box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.15);
+}
+
+/* Form container — glassy steel */
+.form-container {
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-overlay {
+    background: linear-gradient(90deg,
+            rgba(14, 14, 15, 0.92) 0%,
+            rgba(14, 14, 15, 0.75) 50%,
+            rgba(14, 14, 15, 0.4) 100%);
+}
+
+.hero-form {
+    background: rgba(30, 31, 35, 0.95);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(20px);
+}
+
+/* ========================================
+   TRUST BADGES
+   ======================================== */
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    color: var(--offwhite);
+    transition: all var(--speed-snap) ease;
+}
+
+.trust-badge:hover {
+    border-color: rgba(255, 106, 0, 0.3);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.nav-link {
+    color: var(--offwhite);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color var(--speed-snap) ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--signal);
+    transition: width var(--speed-smooth) ease;
+}
+
+.nav-link:hover {
+    color: var(--signal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--charcoal);
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--speed-smooth) ease;
+}
+
+.mobile-menu-wrapper.open {
     opacity: 1;
-    transform: translateX(0);
-  }
+    pointer-events: auto;
+}
+
+/* ========================================
+   MOBILE STICKY CTA
+   ======================================== */
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 0.75rem 1rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    background: var(--charcoal);
+    border-top: 2px solid var(--signal);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   MODAL
+   ======================================== */
+#modal-overlay {
+    transition: opacity var(--speed-smooth) ease;
+}
+
+#modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container {
+    background: var(--steel);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.95) translateY(10px);
+    transition: all var(--speed-smooth) ease;
+}
+
+#modal-overlay:not(.hidden) .modal-container {
+    transform: scale(1) translateY(0);
+}
+
+/* ========================================
+   FAB (Floating Action Button)
+   ======================================== */
+.fab-conversion {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    width: 64px;
+    height: 64px;
+    background: var(--signal);
+    color: var(--charcoal);
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--speed-snap) ease;
+}
+
+.fab-conversion:hover {
+    background: var(--signal-hot);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.text-signal {
+    color: var(--signal);
+}
+
+.text-offwhite {
+    color: var(--offwhite);
+}
+
+.text-concrete {
+    color: var(--concrete);
+}
+
+.text-charcoal {
+    color: var(--charcoal);
+}
+
+.bg-charcoal {
+    background-color: var(--charcoal);
+}
+
+.bg-steel {
+    background-color: var(--steel);
+}
+
+.bg-signal {
+    background-color: var(--signal);
+}
+
+.border-signal {
+    border-color: var(--signal);
+}
+
+.border-glass {
+    border-color: var(--glass-border);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* Rounded corners */
+.rounded-sm {
+    border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes pulseGlow {
 
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4);
-  }
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.4);
+    }
 
-  50% {
-    box-shadow: 0 0 0 6px rgba(255, 106, 0, 0);
-  }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 106, 0, 0);
+    }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out forwards;
-}
-
-.animate-slide-in {
-  animation: slideInRight 0.4s ease-out forwards;
+.animate-fade-in {
+    animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .animate-pulse-glow {
-  animation: pulseGlow 2s ease-out infinite;
+    animation: pulseGlow 2s ease-in-out infinite;
 }
 
-/* Staggered delays */
+/* Stagger delays */
 .delay-100 {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 .delay-200 {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .delay-300 {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .delay-400 {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
-/* --- Buttons (PrecisionStrike) --- */
-
-/* Primary: Orange fill, dark text */
-.btn-primary {
-  background: var(--signal);
-  color: var(--charcoal);
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  padding: 0.875rem 1.75rem;
-  border: none;
-  border-radius: var(--radius-button);
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all var(--speed-snap) ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background: var(--signal-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--glow-signal);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
-}
-
-/* Secondary: Transparent, orange outline */
-.btn-secondary {
-  background: transparent;
-  color: var(--signal);
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  padding: 0.875rem 1.75rem;
-  border: 2px solid var(--signal);
-  border-radius: var(--radius-button);
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all var(--speed-snap) ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn-secondary:hover {
-  background: var(--signal);
-  color: var(--charcoal);
-  transform: translateY(-2px);
-}
-
-.btn-secondary:active {
-  transform: translateY(0);
-}
-
-/* Outline variant */
-.btn-outline {
-  background: transparent;
-  color: var(--offwhite);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-button);
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all var(--speed-snap) ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn-outline:hover {
-  border-color: var(--signal);
-  color: var(--signal);
-}
-
-/* --- Cards (Dark Steel) --- */
-.card-steel {
-  background: var(--steel);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  transition: all var(--speed-quick) ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.card-steel::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.card-steel:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-float);
-  border-color: rgba(255, 106, 0, 0.3);
-}
-
-/* Service cards */
-.service-card {
-  background: var(--steel);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  transition: all var(--speed-quick) ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-float);
-  border-color: rgba(255, 106, 0, 0.4);
-}
-
-/* --- Forms --- */
-.form-input {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-button);
-  color: var(--offwhite);
-  padding: 0.875rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
-  transition: all var(--speed-quick) ease;
-}
-
-.form-input::placeholder {
-  color: var(--concrete);
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--signal);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* Floating Quote Form */
-.quote-form-card {
-  background: var(--steel);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-float);
-  backdrop-filter: blur(8px);
-}
-
-/* --- Hero Section --- */
-.hero-section {
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(14, 14, 15, 0.92) 0%, rgba(14, 14, 15, 0.6) 50%, rgba(14, 14, 15, 0.4) 100%);
-}
-
-/* --- Trust Badges --- */
-.trust-badge {
-  background: var(--steel);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-button);
-  padding: 0.5rem 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* --- Dividers & Accents --- */
-.divider-signal {
-  width: 40px;
-  height: 3px;
-  background: var(--signal);
-  border: none;
-  border-radius: 2px;
-}
-
-.accent-line {
-  height: 2px;
-  background: linear-gradient(90deg, var(--signal) 0%, transparent 100%);
-  border: none;
-}
-
-/* --- Navigation --- */
-.nav-dark {
-  background: rgba(14, 14, 15, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.nav-link {
-  color: var(--offwhite);
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: color var(--speed-snap) ease;
-}
-
-.nav-link:hover {
-  color: var(--signal);
-}
-
-/* --- Footer --- */
-.footer-dark {
-  background: var(--charcoal);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* --- Mobile Menu --- */
-.mobile-menu-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--charcoal);
-  z-index: 40;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--speed-smooth) ease;
-}
-
-.mobile-menu-wrapper.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* --- Mobile Sticky CTA --- */
-.mobile-sticky-cta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  padding: 0.75rem 1rem;
-  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
-  background: var(--steel);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* --- Modal --- */
-#modal-overlay {
-  transition: opacity var(--speed-smooth) ease;
-}
-
-#modal-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal-container {
-  transform: scale(0.95) translateY(10px);
-  transition: all var(--speed-smooth) ease;
-}
-
-#modal-overlay:not(.hidden) .modal-container {
-  transform: scale(1) translateY(0);
-}
-
-/* --- Utility Classes --- */
-.text-signal {
-  color: var(--signal);
-}
-
-.text-offwhite {
-  color: var(--offwhite);
-}
-
-.text-concrete {
-  color: var(--concrete);
-}
-
-.bg-charcoal {
-  background-color: var(--charcoal);
-}
-
-.bg-steel {
-  background-color: var(--steel);
-}
-
-.bg-signal {
-  background-color: var(--signal);
-}
-
-.border-signal {
-  border-color: var(--signal);
-}
-
-.border-steel {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.rounded-button {
-  border-radius: var(--radius-button);
-}
-
-.rounded-card {
-  border-radius: var(--radius-card);
-}
-
-.rounded-image {
-  border-radius: var(--radius-image);
-}
-
-/* --- Responsive --- */
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
 
-  .btn-primary,
-  .btn-secondary {
-    font-size: 1.125rem;
-    padding: 0.75rem 1.5rem;
-  }
+    .btn-primary,
+    .btn-secondary {
+        font-size: 1.125rem;
+        padding: 0.75rem 1.5rem;
+    }
 
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
+    .fab-conversion {
+        bottom: 5rem;
+        right: 1rem;
+        width: 56px;
+        height: 56px;
+    }
 }
 
-/* --- Print --- */
+/* ========================================
+   PRINT STYLES
+   ======================================== */
 @media print {
 
-  .mobile-sticky-cta,
-  .mobile-menu-wrapper,
-  #modal-overlay {
-    display: none !important;
-  }
+    .mobile-sticky-cta,
+    .mobile-menu-wrapper,
+    #modal-overlay,
+    .fab-conversion {
+        display: none !important;
+    }
 }
